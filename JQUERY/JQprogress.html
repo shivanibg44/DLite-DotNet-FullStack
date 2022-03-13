@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI ProgressBar functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/mint-choc/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <style>
+         .ui-widget-header {
+            background: #b3dd0a;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+            font-weight: bold;
+         }
+      </style>
+      
+      <script>
+         $(function() {
+            $( "#progressbar-1" ).progressbar({
+               value: 30
+               
+            });
+            $( "#progressbar-1" ).progressbar('disable');
+         });
+      </script>
+   </head>
+   
+   <body> 
+       <pre>
+        Progress bars indicate the completion percentage of an operation or process. We can categorize progress bar as determinate progress bar and indeterminate progress bar.
+
+        Determinate progress bar should only be used in situations where the system can accurately update the current status.
+        
+        A determinate progress bar should never fill from left to right, then loop back to empty for a single process.
+        
+        If the actual status cannot be calculated, an indeterminate progress bar should be used to provide user feedback.
+        
+        jQueryUI provides an easy-to-use progress bar widget that we can use to let users know that our application is hard at work performing the requested operation. 
+        
+        jQueryUI provides progressbar() method to create progress bars.
+
+        Syntax
+                $(selector, context).progressbar (options);
+
+
+       </pre>
+      <div id = "progressbar-1"></div> 
+      <hr>
+      <script>
+          //Here you can see that the progress bar fills from right to left and stops when the value reaches 300.
+        $(function() {
+           var progressbar = $( "#progressbar-2" );
+           $( "#progressbar-2" ).progressbar({
+              value: 30,
+              max:300
+           });
+           function progress() {
+              var val = progressbar.progressbar( "value" ) || 0;
+              progressbar.progressbar( "value", val + 1 );
+              if ( val < 99 ) {
+                 setTimeout( progress, 100); //increases the value every 100ms
+              }
+           }
+           setTimeout( progress, 5000 ); // starts after 5 second
+        });
+     </script>
+
+<div id = "progressbar-2"></div>
+   </body>
+   
+</html>

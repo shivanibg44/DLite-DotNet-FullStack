@@ -1,0 +1,84 @@
+<html>
+<body>
+    <h2>Polymorphism</h2>
+                <pre>
+                  Polymorphism is one of the tenets of Object Oriented Programming (OOP).
+                   It helps to design objects in such a way that the they can share or override any behavior with the specific provided objects.
+                   Polymorphism takes advantage of inheritance in order to make this happen.
+                </pre>
+                <script>  
+                  class A  
+                    {  
+                       display()  
+                      {  
+                        document.writeln("A is invoked<br>");  
+                      }  
+                    } 
+                    
+                    
+                  class B extends A  
+                    {  
+                      display()  
+                      {  
+                        document.writeln("B is invoked"+"<br>");  
+                      }  
+                    }  
+                    
+                  var a=[new A(), new B()]  
+                  a.forEach(function(msg)  
+                  {  
+                  msg.display();  
+                  });  
+                  </script>  
+<script>
+
+
+   var game = function () {}
+
+
+      game.prototype.select = function()
+   {
+      return "SPORTS"
+   }
+
+
+
+   var cricket = function() {}
+
+   cricket.prototype = Object.create(game.prototype);
+   cricket.prototype.select = function()                //  overridden the select method to display new string   
+    {                                                        
+      return "Cricket";
+   }
+
+
+
+   var tennis = function() {}
+   tennis.prototype = Object.create(game.prototype);  // overridden the select method to display new string
+   tennis.prototype.select = function()                              
+   {
+      return "Tennis";
+   }
+
+
+
+   var football = function() {}
+
+   football.prototype = Object.create(game.prototype);  // shared parent property
+
+
+   
+
+   var games = [new game(), new cricket(), new tennis(), new football()];
+
+
+
+
+   games.forEach(function(game)
+   {
+    document.write(game.select());
+    document.write("</br>");
+   });
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+    <h1>
+        Bootstrap Popover
+    
+        </h1>
+           <p> The bootstrap popover plugin is very similar to tooltips. It appears as a pop-up box when the user clicks on an element.
+            The difference is that the popover can contain much more content.
+            To create a popover, add the data-toggle="popover" attribute to an element and the title attribute to specify the header text of the popover,
+            the data-content attribute to specify the text that should be displayed inside the popover's body.</p>
+<div class="container">  
+  <h3>Popover Example</h3>  
+  <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>  
+</div>  
+  
+<script>  
+$(document).ready(function(){  
+    $('[data-toggle="popover"]').popover();     
+});  
+</script>  
+
+<hr>
+<br>
+<div class="container">  
+    <h3>Popover Example</h3>  
+    <ul class="list-inline">  
+      <li><a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Top</a></li>  
+      <li><a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</a></li>  
+      <li><a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Left</a></li>  
+      <li><a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Right</a></li>  
+    </ul>  
+  </div>  
+    
+  <script>  
+  $(document).ready(function(){  
+      $('[data-toggle="popover"]').popover();     
+  });  
+  </script>
+  <hr>
+  <br>
+  <div class="container">  
+    <h3>Popover Example</h3>  
+      <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>  
+  </div>  
+    
+  <script>  
+  $(document).ready(function(){  
+      $('[data-toggle="popover"]').popover();     
+  });  
+  </script>  
+      
+    
+  
+</body>  
+</html>  
+
+ 

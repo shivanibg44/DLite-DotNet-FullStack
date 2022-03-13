@@ -1,0 +1,143 @@
+<html>
+    <body>
+
+        <pre style="font-size: larger;color: blue;">
+            JavaScript is a prototype-based language that facilitates the objects to acquire properties and features from one another. 
+            Here, each object contains a prototype object.
+            In JavaScript, whenever a function is created the prototype property is added to that function automatically. 
+            This property is a prototype object that holds a constructor property.
+            Whenever an object is created in JavaScript, its corresponding functions are loaded into memory. 
+            So, a new copy of the function is created on each object creation.
+            In a prototype-based approach, all the objects share the same function. 
+            This ignores the requirement of creating a new copy of function for each object. 
+            Thus, the functions are loaded once into the memory.
+            JavaScript is a dynamic language. You can attach new properties to an object at any time as shown below.
+
+            All JavaScript objects inherit properties and methods from a prototype:
+
+Date objects inherit from Date.prototype
+Array objects inherit from Array.prototype
+Person objects inherit from Person.prototype
+The Object.prototype is on the top of the prototype inheritance chain:
+
+Date objects, Array objects, and Person objects inherit from Object.prototype.
+
+Adding Properties and Methods to Objects
+Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+
+Sometimes you want to add new properties (or methods) to an object constructor.
+        </pre>
+        <hr>
+        <h1>Attach property to object</h1>
+	
+	<script>    
+	function Student()
+   {
+		this.name = 'John';
+		this.gender = 'M';
+	}
+
+	var studObj1 = new Student();
+	studObj1.age = 15;
+	document.write(studObj1.age+"<br>");
+
+	var studObj2 = new Student();
+	document.write(studObj2.age); 
+	</script>	
+  
+  <pre>
+    As you can see in the above example, age property is attached to studObj1 instance. 
+    
+    However, studObj2 instance will not have age property because it is defined only on studObj1 instance.
+
+    So what to do if we want to add new properties at later stage to a function which will be shared across all the instances?
+    
+    <b>The answer is Prototype.</b>
+    
+    The prototype is an object that is associated with every functions and objects by default in JavaScript, 
+    
+    where function's prototype property is accessible and modifiable and object's prototype property is not visible.
+    
+    Every function includes prototype object by default.
+
+    The prototype object is special type of enumerable object to which additional properties can be attached 
+    
+    to it which will be shared across all the instances of it's constructor function.
+
+    So, use prototype property of a function in the above example in order to have age properties across all the objects as shown below.
+  </pre>
+  <hr>
+  <h1>Prototype</h1>
+	
+	<script>    
+	function Student()
+   {
+		this.name = 'John';
+		this.gender = 'M';
+	}
+ 
+
+	Student.prototype.age = 15;
+
+	var studObj1 = new Student();
+	document.write(studObj1.age+"<br>"); 
+
+	var studObj2 = new Student();
+	document.write(studObj2.age+"<br>"); 
+  //As mentioned above, each object's prototype is linked to function's prototype object.
+  // If you change function's prototype then only new objects will be linked to changed prototype. 
+  //All other existing objects will still link to old prototype of function. 
+  Student.prototype ={ age : 20 };
+  var studObj3 = new Student();
+	document.write(studObj3.age+"<br>"); 
+  document.write(studObj1.age+"<br>"); 
+  document.write(studObj2.age+"<br>"); 
+	</script>	
+  <hr>
+  <h1>Prototype</h1>
+	<script>    
+	function Student() 
+  {
+		this.name = 'John';
+		this.gender = 'Male';
+	}
+
+	var studObj = new Student();
+
+	Student.prototype.sayHi= function()
+  {
+		document.write("Hi");
+	};
+
+	var studObj1 = new Student();
+	var proto = Object.getPrototypeOf(studObj1); 
+        
+	document.write(proto.constructor); 
+	</script>	
+  <hr>
+  <h2>JavaScript Objects</h2>
+  <p>The JavaScript prototype property also allows you to add new methods to objects constructors</p>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) 
+{
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+Person.prototype.name = function()
+ {
+  return this.firstName + " " + this.lastName;
+};
+
+const n = new Person("Paul", "Walker", 36, "blue");
+document.getElementById("demo").innerHTML ="My name is " + n.name();
+document.write(n.name());
+</script>
+  
+    </body>
+</html>

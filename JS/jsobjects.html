@@ -1,0 +1,55 @@
+<html>
+<body>
+
+<pre style="font-size:larger;">
+    A javaScript object is an entity having state and behavior (properties and method). 
+    JavaScript is an object-based language. Everything is an object in JavaScript.
+    JavaScript is template based not class based. Here, we don't create class to get the object.
+    But, we directly create objects.
+    There are 3 ways to create objects.
+   <ul>
+   <li>By object literal</li>
+   <li>By creating instance of Object directly (using new keyword)</li> 
+   <li>By using an object constructor (using new keyword)</li> 
+   </ul> 
+</pre>
+
+
+<h3>OBJECT LITERAL</h3>
+<script>  
+    var emp1=
+    {
+        id:102,name:"Sam",salary:40000
+    };  
+    document.write(emp1.id+" "+emp1.name+" "+emp1.salary);  
+    </script>
+    <hr>
+
+
+    <h3>INSTANCE OF AN OBJECT</h3>
+    <script>  
+        var emp2=new Object();  
+        emp2.id=101;  
+        emp2.name="Peter";  
+        emp2.salary=50000;  
+        document.write(emp2.id+" "+emp2.name+" "+emp2.salary);  
+        </script>  
+        <hr>
+
+        
+        <h3>OBJECT CONSTRUCTOR</h3>
+        <script>  
+            function emp(id,name,salary)
+            {  
+            this.id=id;  
+            this.name=name;  
+            this.salary=salary;  
+            }  
+            e=new emp(103,"Paul",30000);  
+              
+            document.write(e.id+" "+e.name+" "+e.salary);  
+            </script>  
+</body>
+</html>
+
+

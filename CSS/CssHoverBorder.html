@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>HOVER ANIMATION</title>
+        <style>
+        body{
+            background: #FC5C7D;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        }
+        
+        .text
+        {
+            text-align: center;
+            margin-top: 20%;
+        }
+        .hoverborder
+        {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size:80px;
+            text-decoration: none;
+            position: relative;/*the element is positioned relative to its normal position.*/
+        
+        }
+        .hoverborder::after
+        {
+            content: ' ';
+            width: 0%; /*width:15%*/
+            height:20px;
+         background: #C6FFDD;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            position:absolute;/*the element is positioned absolutely to its first positioned parent.*/
+            bottom: 0%;
+            left: 40%; /*80%*/
+            border-radius: 10px;
+            transition: all 250ms ease;/*Default value. All properties will get a transition effect,500 millisecond,default ease*/
+        /*specifies a transition effect with a slow start, then fast, then end slowly*/
+        }
+        .hoverborder:hover::after
+        {
+        left:0%;
+        width:100%; /*remove width for another animation effect*/
+        }
+        .box {
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  transition: background-color 500ms ease-in;
+}
+
+.box:hover {
+  background-color: green;
+  cursor: pointer;
+}
+    </style>
+    </head>
+    <body>
+        <div class="text"><a href="" class="hoverborder">HELLO</a></div>
+        <div class="box"></div>
+        
+    </body>
+    
+
+</html>

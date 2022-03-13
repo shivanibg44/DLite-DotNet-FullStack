@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Autocomplete functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            var autocomp  =  [
+               "ASP",
+               "Bootstrap",
+               "C",
+               "C++",
+               "Javascript",
+               "Java",
+               "Jquery",
+               "Sql"
+            ];
+            $( "#automplete-1" ).autocomplete({
+               source: autocomp,
+               autoFocus:true,
+              minLength:2,   
+               delay:500,   
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+       <h1>AUTOCOMPLETE</h1>
+       <pre>
+        Auto completion is a mechanism frequently used in modern websites to provide the user with a list of suggestions for the beginning of the word,
+        which he/she has typed in a text box.
+        
+        The user can then select an item from the list, which will be displayed in the input field.
+        
+        This feature prevents the user from having to enter an entire word or a set of words.
+
+        JQueryUI provides an autocomplete widget — a control that acts a lot like a select dropdown, 
+        but filters the choices to present only those that match what the user is typing into a control. 
+        
+        jQueryUI provides the autocomplete() method to create a list of suggestions below the input field and adds new CSS classes to the elements concerned to give them the appropriate style.
+       
+        Syntax
+            $(selector, context).autocomplete (options);
+    
+    </pre>
+      <!-- HTML --> 
+      <div class = "ui-widget">
+         <p><em>Enter word or letter </em></p>
+         <label for = "automplete-1">Tags: </label>
+         <input id = "automplete-1">
+      </div>
+   </body>
+</html>

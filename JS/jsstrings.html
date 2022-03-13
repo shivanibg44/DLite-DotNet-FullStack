@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>JavaScript Strings</h1>
+	
+	<p id="p1"></p>
+	<p id="p2"></p>
+	
+	<script>
+		var str1 = "CG VAK";
+
+		var str2 = 'G2 TECH';
+
+		document.getElementById("p1").innerHTML = str1;
+		document.getElementById("p2").innerHTML = str2;
+    </script>
+    <hr>
+    <p id="p3"></p>
+	<p id="p4"></p>
+    <p id="p5"></p>
+	<p id="p6"></p>
+    <p id="p7"></p>
+	<p id="p8"></p>
+	<p id="p81"></p>
+    <script>
+		var str = 'CG VAK';
+
+		document.getElementById("p3").innerHTML = str[0];
+
+		document.getElementById("p4").innerHTML = str[1];
+
+		document.getElementById("p5").innerHTML = str[2];
+
+		document.getElementById("p6").innerHTML = str[3];
+
+		document.getElementById("p7").innerHTML = str[4];
+
+        document.getElementById("p8").innerHTML = str[5];
+
+		document.getElementById("p81").innerHTML = str.length
+
+    </script>
+    <hr>
+    <p id="p9"></p>
+	<p id="p10"></p>
+	
+	<script>
+		var str = 'G2 TECH';
+
+		for(var i =0; i< 2;i++)
+		    document.getElementById("p9").innerHTML = document.getElementById("p9").innerHTML + str[i];
+
+		for(var ch of str)
+			document.getElementById("p10").innerHTML = document.getElementById("p10").innerHTML + ch;
+
+    </script>
+    <hr>
+    <script>
+        var str = 'Hello ' + "Trainees " + 'Good ' + 'Day!!!!!!! ';
+        var str1 = "This is 'simple' string";
+        var str2 = 'This is "simple" string';
+        var str3 = "This is \"simple\" string";
+        var str4 = 'This is \'simple\' string';
+        document.write(str+"<br>"+str1+"<br>"+str2+"<br>"+str3+"<br>"+str4+"<br>");
+        </script>
+        <hr>
+        <h3>JavaScript String Object</h3>
+	
+	<p id="p11"></p>
+	<p id="p12"></p>
+	
+	<script>
+		var str1 = new String();
+		str1 = 'Hello Trainees!';
+
+		// or 
+
+		var str2 = new String('Hello Trainees!');
+
+		document.getElementById("p11").innerHTML = str1;
+		document.getElementById("p12").innerHTML = str2;
+
+    </script>
+    <hr>
+    <p id="p13"></p>
+	<p id="p14"></p>
+	<p id="p15"></p>
+	<p id="p16"></p>
+	<p id="p17"></p>
+    <script>
+        var str1 = new String('Hello World');
+		var str2 = new String('Hello World');
+		var str3 = 'Hello World';
+		var str4 = str1;
+
+		document.getElementById("p13").innerHTML = str1 == str2; 
+		document.getElementById("p14").innerHTML = str1 == str3; 
+		document.getElementById("p15").innerHTML = str1 === str4; 
+		document.getElementById("p16").innerHTML = typeof(str4);
+		document.getElementById("p17").innerHTML = typeof(str3); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLithe</title>
+    <style>
+        nav 
+        {
+	background-color: #151b6e;
+        }
+ 
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li 
+    {
+	display:inline-block;
+	background-color: #151b6e;
+	}
+ 
+nav a 
+    {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:15px;
+	line-height: 60px;
+	text-decoration:none;
+    }
+ 
+nav a:hover 
+    { 
+	background-color: rgba(247, 240, 240, 0.4);
+    color: #fff;
+    }
+
+    /* Fisrt level Dropdown */
+nav ul ul li 
+{
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+ 
+/* Second, Third and more levels line-height: 60px;	*/
+nav ul ul ul li 
+{
+	position: relative;
+	top:-60px; 
+	left:170px;
+    width:250px;
+}
+
+nav ul ul ul ul li 
+{
+	position: relative;
+	top:-60px; 
+	left:250px;
+    width:250px;
+}
+
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+/* Hide Dropdowns by Default */
+nav ul ul 
+{
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul 
+{
+	display:inherit;
+}
+</style>
+</head>
+<body style="background-image: url('Coding2.jpg');">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Gallery1</a></li>
+            </ul>        
+            </li>
+            <li><a href="#">Courses</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">WEB UI</a></li>
+                <li><a href="#">DOTNET</a>
+            	<!-- Second Tier Drop Down -->
+                <ul>
+                    <li><a href="#">ASP.NET MVC</a></li>
+                    <li><a href="#">CORE</a>
+                        <!-- Third Tier Drop Down -->
+                        <ul>
+                            <li><a href="#">ENTITY FRAMEWORK</a></li>
+                            <li><a href="#">DEPENDENCY INJECTION</a></li>
+                            <li><a href="#">AZURE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Social media</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">More Info</a></li>
+        </ul>
+    </nav>
+
+    
+</body>
+</html>

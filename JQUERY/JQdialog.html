@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Dialog functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style>
+         .ui-widget-header,.ui-state-default, ui-button {
+            background:#b9cd6d;
+            border: 1px solid #b9cd6d;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+      </style>
+      
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#dialog" ).dialog({
+               autoOpen: false,  
+            });
+            $( "#opener" ).click(function() {
+               $( "#dialog" ).dialog( "open" );
+            });
+         });
+      </script>
+
+<script>
+    $(function() {
+       $( "#dialog1" ).dialog({
+          autoOpen: false, 
+          hide: "blind",
+          show : "slide", //blind,bounce,clip,drop,explode,fade,fold,highlight,scale,shake,transfer
+          height: 200      
+       });
+       $( "#opener1" ).click(function() {
+          $( "#dialog1" ).dialog( "open" );
+       });
+    });
+ </script>
+   </head>
+   
+   <body>
+       <h1>DIALOG UI</h1>
+       <pre>Dialog boxes are one of the nice ways of presenting information on an HTML page. 
+           
+        A dialog box is a floating window with a title and content area. 
+        
+        This window can be moved, resized, and of course, closed using "X" icon by default.
+
+        jQueryUI provides dialog() method that transforms the HTML code written on the page into HTML code to display a dialog box.
+    
+            Syntax
+                 $(selector, context).dialog(options);
+    </pre>
+      <!-- HTML --> 
+      <div id = "dialog" 
+         title = "Hello Trainees...">Welcome to CG VAK!</div>
+      <button id = "opener">Open Dialog</button>
+      <hr>
+      <div id = "dialog1"
+         title = "Hello...">Good day!</div>
+      <button id = "opener1">Open Dialog1</button>
+   </body>
+</html>

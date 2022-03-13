@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  text-align: center;
+  color: red;
+} 
+#para1 {
+  text-align: left;
+  color: blue;
+}
+.center {
+  text-align:right;
+  color: green;
+}
+h1.sel {
+  text-align:center;
+  color: pink;
+}
+h2, h3, h4 {
+  text-align:right;
+  color: yellow;
+}
+*{
+  text-align:center;
+  color: orange;
+}
+
+</style>
+</head>
+<body>
+
+
+<p>element Selector for a paragraph</p>
+<p id="para1">id Selector for a paragraph</p>
+<p class="center">class Selector for a paragraph</p>
+<p class="sel">class Selector not affected for this paragraph since it is created only for the h1 tag</p>
+<h1 class="sel">specific class selector applied for h1<h1>
+<h2>Grouping Selector for h2</h2>
+<h3>Grouping Selector for h3</h3>
+<h4>Grouping Selector for h4</h4>
+<h5>Universal Selector applied</h5>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <pre>
+        The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.
+    
+There are no official standards for the Browser Object Model (BOM).
+
+Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.
+
+The Window Object
+The window object is supported by all browsers. It represents the browser's window.
+
+All global JavaScript objects, functions, and variables automatically become members of the window object.
+
+Global variables are properties of the window object.
+
+Global functions are methods of the window object.
+
+Even the document object (of the HTML DOM) is a property of the window object
+    </pre>
+
+<h2>JavaScript Window</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+</script>
+<hr>
+<pre>
+    The window.screen object contains information about the user's screen.
+</pre>
+
+
+<p id="demo1"></p>
+
+<script>
+document.getElementById("demo1").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+
+<hr>
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML = 
+"Screen height is " + screen.height;
+/*screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+screen.colorDepth
+screen.pixelDepth*/
+</script>
+<hr>
+<h3>The window.location object</h3>
+<pre>
+    The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+    Window Location
+The window.location object can be written without the window prefix.
+
+Some examples:
+
+window.location.href returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+window.location.assign() loads a new document
+</pre>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+<hr>
+<pre>
+    The window.history object contains the browsers history.
+    The window.history object can be written without the window prefix.
+
+To protect the privacy of the users, there are limitations to how JavaScript can access this object.
+
+Some methods:
+
+history.back() - same as clicking back in the browser
+history.forward() - same as clicking forward in the browser
+</pre>
+<script>
+    function goBack() 
+    {
+      window.history.back()
+    }
+    </script>
+    <input type="button" value="Back" onclick="goBack()">
+    <hr>
+    <pre>
+        The window.navigator object contains information about the visitor's browser.
+        The window.navigator object can be written without the window prefix.
+
+Some examples:
+
+navigator.appName
+navigator.appCodeName
+navigator.platform
+    </pre>
+    <p>The cookieEnabled property returns true if cookies are enabled:</p>
+
+<p id="demo4"></p>
+
+<script>
+document.getElementById("demo4").innerHTML =
+"navigator.cookieEnabled is " + navigator.cookieEnabled;
+</script>
+
+
+
+</body>
+</html>

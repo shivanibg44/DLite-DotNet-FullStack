@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+<pre>JavaScript statements are composed of:
+
+Values, Operators, Expressions, Keywords, and Comments.
+
+The JavaScript syntax defines two types of values:
+
+Fixed values
+Variable values
+Fixed values are called Literals.
+
+Variable values are called Variables.
+
+Variables defined with let cannot be redeclared.
+
+You cannot accidentally redeclare a variable.
+
+JavaScript const variables must be assigned a value when they are declared.
+
+In JavaScript, let is a keyword that is used to declare a block scoped variable. 
+
+Usually, the var keyword is used to declare a variable in JavaScript which is treated as a normal variable, but the variables declared using the let keyword are block scoped.
+
+JavaScript provides three ways to declare a variable: var, const, and let. 
+
+These keywords deliver different functionality from each other. 
+
+Var(function scoped) is a traditional method to declare a variable while const and let(block scoped) keyword was introduced later by the ES2015/ES6, which is to create block scope variable.
+
+Var is defined throughout the program compared to let
+</pre>
+
+
+<p id="demo"></p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<p id="demo3"></p>
+
+<p id="demo4"></p>
+
+<script>
+
+let x, y, z;  // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4
+const PI = 3.14159265359;
+
+var carName = "Volvo";
+
+let  a = 10;  //global scope
+// Here a is 10
+
+
+{  
+  
+  let a = 2;
+  let b=5;  //local scope
+  document.write("Local Scope"+b+"<br>");
+  // Here a is 2  
+}
+
+{
+   let b=3;// Redeclaring a variable with let, in another block, IS allowed
+}
+
+document.getElementById("demo").innerHTML =
+"The value of z is " + z + ".";  //variable
+
+document.getElementById("demo1").innerHTML = 10.50; //literal
+
+document.getElementById("demo2").innerHTML = (5 + 6) * 10; //operators
+
+
+document.getElementById("demo3").innerHTML = carName;
+
+document.getElementById("demo4").innerHTML = "Global Scope"+a;
+
+document.write(PI);
+document.write(b);
+
+
+</script>
+
+</body>
+</html>

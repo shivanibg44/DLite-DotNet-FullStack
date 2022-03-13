@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+
+  <script>
+        
+function validate()
+{  
+var email=document.getElementById("email").value;
+var pwd=document.getElementById("pwd").value;
+  
+if (email==null || email=="")
+
+{  
+  alert("Email can't be blank");  
+  return false;  
+}
+
+else if(pwd.length<6)
+
+{  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+} 
+
+function Check() {
+  return validate();      
+}
+ 
+  </script>
+ 
+</head>  
+<body style="background-color:rgb(72, 78, 78);"> 
+   
+    <div class="container">
+       
+    </div> 
+    <hr>
+    <div class="container">
+        
+    </div>
+  
+<div class="container">  
+  <h2 style="color: aliceblue;">CK VAK</h2>  
+  <form role="form" action="BootstrapSample.html" onsubmit="return validate()" method="POST"  name="f1">  
+    <div class="form-group">  
+      <label for="email" style="color: aliceblue;">Email:</label>  
+      <input type="email" class="form-control" id="email" placeholder="Enter email">  
+    </div>  
+    <div class="form-group">  
+      <label for="pwd" style="color: aliceblue;">Password:</label>  
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">  
+    </div>  
+    <div class="form-check">  
+      <label class="form-check-label" style="color: aliceblue;">  
+        <input class="form-check-input" type="checkbox"> Remember me  
+      </label>  
+    </div>  
+    <button type="submit" class="btn btn-light" value="Check" >Submit</button>  
+  </form>  
+</div> 
+<hr>
+
+  
+</body>  
+</html>  

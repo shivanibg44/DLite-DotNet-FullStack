@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="displayTime"></p>
+<p>Click "Stop" to stop the displayed time over here.</p>
+<button onclick="stopTime()">Stop</button>
+<button onclick="start()">Start</button>
+<script>
+var timerId= setInterval(()=>
+{
+getTime()
+},1000);
+function getTime()
+{
+var currentDate= new Date();
+var currentTime= currentDate.toLocaleTimeString();
+document.getElementById("displayTime").innerHTML = currentTime;
+}
+function stopTime()
+{
+clearInterval(timerId);
+
+}
+function start()
+{
+setInterval(timerId);
+}
+</script>
+</body>
+</html>

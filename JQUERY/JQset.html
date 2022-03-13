@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>
+        jQuery - Set Content and Attributes
+    </h1>
+    <pre>
+        Set Content - text(), html(), and val()
+We will use the same three methods from the previous page to set content:
+
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields
+    </pre>
+    <hr>
+    <script>
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            $("#test1").text("Hello Trainees!");
+          });
+          $("#btn2").click(function(){
+            $("#test2").html("<b>Welcome to CG VAK!</b>");
+          });
+          $("#btn3").click(function(){
+            $("#test3").val("CG VAK");
+          });
+        });
+        </script>
+
+<p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+
+<p>Company: <input type="text" id="test3" value="G2 TECHSOFT"></p>
+
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+<hr>
+<pre>
+    A Callback Function for text(), html(), and val()
+All of the three jQuery methods above: text(), html(), and val(), also come with a callback function. 
+The callback function has two parameters: the index of the current element in the list of elements selected and the original (old) value. 
+You then return the string you wish to use as the new value from the function.
+</pre>
+<script>
+    $(document).ready(function(){
+      $("#bt1").click(function(){
+        $(".tst1").text(function(i, origText){
+          return "Old text: " + origText + " New text: Hello Trainees! (index: " + i + ")"; 
+        });
+      });
+    
+      $("#bt2").click(function(){
+        $("#tst2").html(function(i, origText){
+          return "Old html: " + origText + " New html: Welcome to <b>CG VAK!</b> (index: " + i + ")"; 
+        });
+      });
+    });
+    </script>
+
+<p class="tst1">Hi Trainees!!!!!!!</p>
+<p class="tst1">Hru Trainees!!!!!!!</p>
+<p class="tst1"> Trainees!!!!!!!</p>
+<p id="tst2">Have a good day.</p>
+
+<button id="bt1">Show Old/New Text</button>
+<button id="bt2">Show Old/New HTML</button>
+
+<hr>
+<pre>
+    Set Attributes - attr()
+The jQuery attr() method is also used to set/change attribute values.
+
+</pre>
+<script>
+    $(document).ready(function(){
+      $("#a").click(function(){
+        $("#m").attr("href", "https://www.microsoft.com/").attr("title" , "Welcome to Microsoft")
+        $("#m").text("www.microsoft.com");
+      });
+    });
+    </script>
+
+<p><a href="https://www.Google.com" id="m" title="Welcome to Google">www.google.com</a></p>
+
+<button id="a">Change href Value</button>
+
+
+</body>
+</html>

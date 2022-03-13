@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery - Effects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="selector.html">JQuery Concepts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="selector.html" id="navbardrop" data-toggle="dropdown">
+                        Selectors
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="selector.html">Element</a>
+                        <a class="dropdown-item" href="selector.html">ID</a>
+                        <a class="dropdown-item" href="selector.html">Class</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="effects.html">Effects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="animation.html">Animation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <h1>Effects - hide() and Show()</h1>
+        <hr>
+        
+        <pre>
+            <code>
+                $(document).ready(function(){
+                    $(".btn1").click(function(){
+                      $("p").hide();
+                    });
+                    $(".btn2").click(function(){
+                      $("p").show();
+                    });
+            </code>
+        </pre>
+        <p>Results:</p>
+        <script>
+            $(document).ready(function () {
+                $("#btn1").click(function () {
+                    $("p").hide();
+                });
+                $("#btn2").click(function () {
+                    $("p").show();
+                });
+            });
+        </script>
+        <button id="btn1" class="btn btn-primary">Hide</button>
+        <button id="btn2" class="btn btn-success">Show</button>
+        <br>
+        <br>
+    </div>
+    <br>
+
+    <div class="container">
+        <br>
+        <h1>jQuery - Toggle</h1>
+        <hr>
+        
+        <pre>
+            <code>
+                $(document).ready(function () {
+                    $("#btn3").click(function () {
+                        $("#toggle_img").toggle();
+                    });
+                });
+            </code>
+        </pre>
+        <p>Results:</p>
+        <script>
+            $(document).ready(function () {
+                $("#btn3").click(function () {
+                    $("#toggle_img").toggle();
+                });
+            });
+        </script>
+        <img src="pic.png" id="toggle_img" alt="">
+        <br>
+        <br>
+        <button id="btn3" class="btn btn-primary">Toggle</button>
+        <br>
+        <br>
+    </div>
+    <br>
+
+    <div class="container">
+        <br>
+        <h1>jQuery - Fade In</h1>
+        <hr>
+        
+        <pre>
+            <code>
+                $(document).ready(function () {
+                    $("#btn4").click(function () {
+                        $("#fade_img").fadeOut("slow");
+                    });
+                    $("#btn5").click(function () {
+                        $("#fade_img").fadeIn("fast");
+                    });
+                });
+            </code>
+        </pre>
+        <p>Results:</p>
+        <script>
+            $(document).ready(function () {
+                $("#btn4").click(function () {
+                    $("#fade_img").fadeOut("slow");
+                });
+                $("#btn5").click(function () {
+                    $("#fade_img").fadeIn("fast");
+                });
+            });
+        </script>
+        <img src="pic.png" id="fade_img" alt="">
+        <br>
+        <br>
+        <button id="btn4" class="btn btn-primary">Fade out</button>
+        <button id="btn5" class="btn btn-info">Fade in</button>
+        <br>
+        <br>
+    </div>
+    <br>
+
+    <div class="container">
+        <br>
+        <h1>jQuery - Slide</h1>
+        <hr>
+       
+        <pre>
+            <code>
+                $(document).ready(function () {
+                    $("#btn6").click(function () {
+                        $("#slide_img").slideUp("slow");
+                    });
+                    $("#btn7").click(function () {
+                        $("#slide_img").slideDown("fast");
+                    });
+                });
+            </code>
+        </pre>
+        <p>Results:</p>
+        <script>
+            $(document).ready(function () {
+                $("#btn6").click(function () {
+                    $("#slide_img").slideUp("slow");
+                });
+                $("#btn7").click(function () {
+                    $("#slide_img").slideDown("fast");
+                });
+            });
+        </script>
+        <img src="pic.png" id="slide_img" alt="">
+        <br>
+        <br>
+        <button id="btn6" class="btn btn-primary">Slide up</button>
+        <button id="btn7" class="btn btn-info">Slide down</button>
+        <br>
+        <br>
+    </div>
+    <br>
+
+    <div class="container">
+        <br>
+        <h1>jQuery - Chaining</h1>
+        <hr>
+      
+        <pre>
+            <code>
+                $(document).ready(function () {
+                    $("#btn8").click(function () {
+                        $("#chaining_img").hide("slow").show("slow").hide("slow").show("slow");
+                    });
+                });
+            </code>
+        </pre>
+        <p>Results:</p>
+        <script>
+            $(document).ready(function () {
+                $("#btn8").click(function () {
+                    $("#chaining_img").hide("slow").show("slow").hide("slow").show("slow");
+                });
+            });
+        </script>
+        <img src="pic.png" id="chaining_img" alt="">
+        <br>
+        <br>
+        <button id="btn8" class="btn btn-primary">Chaining</button>
+        <br>
+        <br>
+    </div>
+    <br>
+
+    <div class="container">
+        <br>
+        <h1>jQuery - Callback</h1>
+        <hr>
+       
+        <pre>
+            <code>
+                $(document).ready(function () {
+                    $("#btn9").click(function () {
+                        $("#callback_img").hide("slow").show("slow").delay(1000).hide("slow").show("slow");
+                    });
+                });
+            </code>
+        </pre>
+        <p>Results:</p>
+        <script>
+            $(document).ready(function () {
+                $("#btn9").click(function () {
+                    $("#callback_img").hide("slow", function () {
+                        alert("The image is hidden");
+                    });
+                });
+            });
+        </script>
+        <img src="pic.png" id="callback_img" alt="">
+        <br>
+        <br>
+        <button id="btn9" class="btn btn-primary">Callback</button>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+
+
+</body>
+
+</html>

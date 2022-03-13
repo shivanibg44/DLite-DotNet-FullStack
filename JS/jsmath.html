@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Math Constants</h2>
+<pre>
+    //Being a scripting language, sometimes the JavaScript code displays the correct result even it has some errors. To overcome this problem we can use the JavaScript strict mode.
+
+The JavaScript provides "use strict"; expression to enable the strict mode. If there is any silent error or mistake in the code, it throws an error.
+</pre>
+
+<p id="demo"></p>
+
+<script>
+    
+   //"use strict"; 
+   a=10;
+document.getElementById("demo").innerHTML = 
+"<p><b>Math.E:</b> " + Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+</script>
+<hr>
+<script>
+document.write(Math.round(4.7)+"<br>");
+document.write(Math.round(-4.7)+"<br>");
+document.write(Math.ceil(4.7)+"<br>");
+document.write(Math.ceil(4.2)+"<br>");
+document.write(Math.floor(4.7)+"<br>");
+document.write(Math.trunc(4.7)+"<br>");
+document.write(Math.sign(0)+"<br>");
+document.write(Math.sign(-4.7)+"<br>");
+document.write(Math.pow(4,2)+"<br>");
+document.write(Math.sqrt(81)+"<br>");
+document.write(Math.abs(-1)+"<br>");
+document.write(Math.sin(1)+"<br>");
+document.write(Math.cos(1)+"<br>");
+document.write(Math.tan(1)+"<br>");
+document.write(Math.min(0, 150, 30, 20, -8, -200)+"<br>");
+document.write(Math.max(0, 150, 30, 20, -8, -200)+"<br>");
+document.write(Math.random()+"<br>");   
+document.write(Math.log(1)+"<br>");  
+//Math.floor(Math.random() * 10) returns a random integer between 0 and 9 (both included):
+document.write(Math.floor(Math.random() * 100)+"<br>");
+ //0 to 99 (*100) 0 to 100 (*101) 0 to 10 (*11) 
+    
+    </script>
+    <hr>
+    <p>Hoisting is a mechanism in JavaScript that moves the declaration of variables and functions at the top. So, in JavaScript we can use variables and functions before declaring them.
+
+        JavaScript hoisting is applicable only for declaration not initialization. It is required to initialize the variables and functions before using their values.</p>
+    <script>  
+    //JavaScript Function Hoisting
+        document.write(sum(10,20)+"<br>");  
+        function sum(a,b)  
+        {  
+        return a+b;  
+        }  
+//JavaScript Variable Hoisting
+        x=10;  
+document.write(x);  
+var x;  
+        </script>  
+
+</body>
+</html>

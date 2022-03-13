@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+<script>
+    $(document).ready(function(){
+      $("#four").click(function(){
+        $("a").addClass("blue");
+        $("h2,h3").addClass("important");
+        $("h4, h5").removeClass("pink");
+        $("h6").toggleClass("green");
+      });
+    });
+    </script>
+
+<style>
+    .important {
+      font-weight: bold;
+      font-size: xx-large;
+      color:red
+    }
+    
+    .blue {
+      color: blue;
+      font-size: larger;
+    }
+
+    .pink {
+  color: rgb(248, 39, 161);
+    }
+
+  .green
+  {
+      color:green;
+      font-size: x-large;
+      text-transform: uppercase;
+      text-decoration:underline;
+      text-decoration-style: double;
+      text-decoration-color: rgb(207, 33, 241);
+      
+  }
+
+  
+
+
+    </style>
+
+    <h1>jQuery - Get and Set CSS Classes</h1>
+
+    <pre>
+        With jQuery, it is easy to manipulate the style of elements.
+
+jQuery Manipulating CSS
+jQuery has several methods for CSS manipulation. We will look at the following methods:
+
+addClass() - Adds one or more classes to the selected elements
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() - Sets or returns the style attribute
+    </pre>
+
+<h2>CG VAK</h2>
+<h3>G2 TECHSOFT</h3>
+<h4 class="pink">CG VAK</h4>
+<h5 class="pink">G2 TECHSOFT</h5>
+<h6>Toggle class</h6>
+
+<a href="">g2tech</a>
+<br>
+<a href="">cgvak</a>
+<br>
+<button id="four">Add classes to elements</button>
+
+<hr>
+<script>
+    $(document).ready(function(){
+      $("#one").click(function(){
+          //To set a specified CSS property, use the following syntax:
+
+        //css("propertyname","value");
+        $("p").css("background-color", "green");
+
+        //To set multiple CSS properties, use the following syntax:
+
+        //css({"propertyname":"value","propertyname":"value",...});
+        $("pre").css({"color": "purple", "font-size": "20px"});
+
+        //To return the value of a specified CSS property, use the following syntax:
+
+        //css("propertyname");
+
+        alert("Color of h4= " + $("h4").css("color"));
+      });
+    });
+    </script>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+<button id="one">Set background-color of p</button>
+
+
+
+
+</body>
+</html>
+

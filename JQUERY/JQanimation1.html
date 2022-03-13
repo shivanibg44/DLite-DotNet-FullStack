@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("p").click(function(){
+    var div = $("div");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "fast");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, 7000);
+  });
+});
+
+$(document).ready(function(){
+  $("p").click(function(){
+    var img = $("img");
+    img.animate({height: '150px', opacity: '0.4'}, "slow");
+    img.animate({width: '150px', opacity: '0.8'}, "slow");
+    img.animate({height: '200px', opacity: '0.4'}, "slow");
+    img.animate({width: '200px', opacity: '0.8'}, "slow");
+    img.animate({height: '400px', opacity: '0.4'}, "fast");
+    img.animate({width: '400px', opacity: '0.8'}, "fast");
+    img.animate({height: '100px', opacity: '0.4'}, "slow");
+    img.animate({width: '100px', opacity: '0.8'}, "slow");
+    img.fadeOut(7000);
+    
+  });
+});
+</script> 
+</head>
+<body>
+
+<p style="text-align: center;color: blue;font-size: larger;">Start Animation</p>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#06e6da;height:100px;width:100px;position:absolute;border-radius: 10px;"></div>
+
+<img src="img4.jpg" style="height: 100px;width: 100px;border-radius: 10px;margin-top: 300px;">
+
+
+</body>
+</html>

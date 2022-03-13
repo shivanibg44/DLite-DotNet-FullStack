@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Creating a Date Object in JavaScript</title>
+</head>
+<body>
+    <script>
+    var d = new Date();
+    document.write(d);
+    </script>
+    <hr>
+    <script>
+        //JavaScript Passing Parameters to the Date Object
+        var d = new Date(2018,0,7,17,14,20,50);
+        document.write(d);
+        </script>
+        <hr>
+        <script>
+            //JavaScript Construct a Date Object by Passing a Date String
+            var d = new Date("7 January 2018");
+            document.write(d);
+            </script>
+            <hr>
+            <script>
+                //JavaScript Generate Date Strings
+                var d = new Date();
+                document.write(d.toDateString() + "<br>"); // Display an abbreviated date string
+                document.write(d.toLocaleDateString() + "<br>"); // Display a localized date string
+                document.write(d.toISOString() + "<br>"); // Display the ISO standardized date string(International Organization for Standardization)
+                document.write(d.toUTCString() + "<br>"); // Display a date string converted to UTC time(Universal Time Coordinated)
+                document.write(d.toString()); // Display the full date string with local time zone
+                </script>
+                <hr>
+                <script>
+                    //JavaScript Get Year, Month, and Day from a Date Object
+                    var d = new Date();
+                    // Extracting date part
+                    document.write(d.getDate() + "<br>"); // Display the day of the month
+                    document.write(d.getDay() + "<br>"); // Display the number of days into the week (0-6)
+                    document.write(d.getMonth() + "<br>"); // Display the number of months into the year (0-11)
+                    document.write(d.getFullYear()); // Display the full year (four digits)
+                    </script>
+                    <hr>
+                    <script>
+                        //JavaScript Get Hours, Minutes, and Seconds from a Date Object
+                        var d = new Date();
+                        // Extracting time part 
+                        document.write(d.getHours() + "<br>"); // Display the number of hours into the day (0-23)
+                        document.write(d.getMinutes() + "<br>"); // Display the number of minutes into the hour (0-59)
+                        document.write(d.getSeconds() + "<br>"); // Display the seconds into the minute (0-59)
+                        document.write(d.getMilliseconds() + "<br>"); // Display the number of milliseconds into second (0-999)
+                       
+                        </script>
+                        <hr>
+                        <h2>JavaScript setFullYear()</h2>
+<p>The setFullYear() method can optionally set month and day.</p>
+<p>The month counts from 0. December is month 11</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+d.setFullYear(2018, 0, 7);
+document.getElementById("demo").innerHTML = d;
+</script>
+<hr>
+<script>
+    //JavaScript Set the Hours, Minutes and Seconds Values of a Date Object
+    var d = new Date(2018, 0, 7); // June 24, 2018 00:00:00
+    d.setHours(17);
+    d.setMinutes(14);
+    d.setSeconds(20);
+    d.setMilliseconds(600);
+    document.write(d);
+    </script>
+</body>
+</html>

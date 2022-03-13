@@ -1,0 +1,134 @@
+<!doctype html>
+<title>Flex Website Layout</title>
+<style>
+    /*CSS FOR FLEX*/
+  * {
+   box-sizing: border-box; 
+  }
+  body {
+    margin: 0;
+  }
+  #main 
+  {
+    display: flex;
+    min-height: calc(100vh - 40vh);
+  }
+  #main > article {
+    flex: 1;
+  }
+  /*CSS3 introduced two units for representing size. 
+  vh, which stands for viewport height is relative to 1% of the viewport height. vw, which stands for viewport width is relative to 1% of the viewport width.*/
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+    background: beige;
+  }
+  #main > nav {
+    order: -1;
+  }
+  /*1em=16px*/
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+  /*Viewport height 1vh=19.2px*/
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  /*CSS FOR FORM ELEMENTS*/
+  .wrapper {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+  }
+  /*Relative to the font-size of the element (2em means 2 times the size of the current font)*/
+  .form-row > input,
+  .form-row > button {
+    padding: .5em;
+  }
+  .form-row > button {
+   background: gray;
+   color: white;
+   border: 0;
+  }
+/*Navigation bar styling*/
+/*Relative to the parent element*/
+.verticalnav 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color:inherit;
+  position: fixed;
+  height: 50%;
+  overflow: auto;
+  font-size: 20px;
+}
+/*Navigation bar links*/
+li a 
+{
+  display: block;
+  color: rgb(12, 12, 12);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+/*Hover effect for navigation links*/
+li a.active 
+{
+  background-color:yellowgreen;
+  color: black;
+}
+
+li a:hover:not(.active) 
+{
+  background-color: rgb(233, 250, 230);
+  color: rgb(83, 14, 247);
+}
+</style>
+<body>
+  <header style="text-align: center;font-size: xx-large;">TIETOEVRY</header>
+  <div id="main">
+    <article><form>
+        <ul class="wrapper">
+          <li class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+          </li>
+          <li class="form-row">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+          </li>
+          <li class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email">
+          </li>
+          <li class="form-row">
+            <button type="submit">Submit</button>
+          </li>
+        </ul>
+      </form></article>
+    <nav><ul class="verticalnav">
+        <li><a class="active" href="workplace.jpg">HOME</a></li>
+        <li><a href="img1.jpg">HTML</a></li>
+        <li><a href="img2.jpg">CSS</a></li>
+        <li><a href="contact.jpg">CONTACT</a></li>
+      </ul></nav>
+    <aside><br>Notice that we also set the min-height to a value using the calc() function. What we're doing here is setting the main area to 100 percent of the viewport's height, minus the height of the header and footer (20vh each). This will ensure that the layout takes up the full height of the screen, even when there's not much content. This means that the footer will never rise up and leave blank space underneath if the content doesn't take up the full screen height.</aside>
+  </div>
+  <footer>Footer:Measurements-https://www.freecodecamp.org/<br>Notice that we also set the min-height to a value using the calc() function. What we're doing here is setting the main area to 100 percent of the viewport's height, minus the height of the header and footer (20vh each). This will ensure that the layout takes up the full height of the screen, even when there's not much content. This means that the footer will never rise up and leave blank space underneath if the content doesn't take up the full screen height.</footer>
+</body>
+</html>

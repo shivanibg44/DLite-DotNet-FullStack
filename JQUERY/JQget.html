@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h1>jQuery - Get Content and Attributes</h1>
+
+<pre>
+    jQuery contains powerful methods for changing and manipulating HTML elements and attributes.
+
+jQuery DOM Manipulation
+One very important part of jQuery is the possibility to manipulate the DOM.
+
+jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.
+
+Get Content - text(), html(), and val()
+Three simple, but useful, jQuery methods for DOM manipulation are:
+
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields
+
+Get Attributes - attr()
+The jQuery attr() method is used to get attribute values.
+</pre>
+<hr>
+<script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        alert("Text: " + $("#test").text());
+      });
+      $("#btn2").click(function(){
+        alert("HTML: " + $("#test").html());
+      });
+    });
+    </script>
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+
+<hr>
+
+<script>
+    $(document).ready(function(){
+      $("#cg").click(function(){
+        alert("COMPANY: " + $("#test1").val());
+      });
+    });
+    </script>
+
+<p>COMPANY: <input type="text" id="test1" value="CG VAK"></p>
+
+<button id="cg">Show Value</button>
+
+<hr>
+
+<script>
+    $(document).ready(function(){
+      $("#1").click(function(){
+        alert($("#g2").attr("href"));
+      });
+    });
+    </script>
+
+<p><a href="https://www.g2techsoft.com" id="g2">www.g2techsoft.com</a></p>
+
+<button id="1">Show href Value</button>
+
+</body>
+</html>

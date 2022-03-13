@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery - Selectors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="selector.html">JQuery Concepts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="selector.html" id="navbardrop" data-toggle="dropdown">
+                        Selectors
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="selector.html">Element</a>
+                        <a class="dropdown-item" href="selector.html">ID</a>
+                        <a class="dropdown-item" href="selector.html">Class</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="effects.html">Effects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="animation.html">Animation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- jQuery element Selector -->
+    <div id="1" class="container">
+        <br>
+        <h1>JQuery Selectors</h1>
+        <hr>
+        <p>element selector for</p>
+            <p>another element selector for paragraph</p>
+        
+            <button id="button0">element selector for p</button>
+        
+        
+        
+        <h2>The element Selector</h2>
+        <hr>
+        
+        <p>CODE</p>
+        
+            <code>
+                <pre>
+                //You can select all <p> elements on a page like this $("p")
+                    $(document).ready(function()
+                    {
+                    $("#button0").click
+                    (function()
+                    {
+                        $("p").hide();
+                    });
+                    });
+            </code>
+        </pre>
+        
+        
+        
+        <p>
+            
+                 <script>
+
+//You can select all <p> elements on a page like this $("p")
+$(document).ready(function()
+{
+$("#button0").click
+(function()
+{
+    $("p").hide();
+});
+});
+</script>
+               
+            
+        </p>
+        <br>
+        <br>
+    </div>
+
+    <br>
+
+    <!-- jQuery ID Selector -->
+    <div id="2" class="container">
+        <br>
+        <h2>The ID Selector</h2>
+        <hr>
+        <b>The #id Selector</b>
+
+            -The jQuery #id selector uses the id attribute of an HTML tag to find the specific element.
+            
+            -An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.
+        
+        
+        <pre>
+            <code>
+                $(document).ready(function(){
+                    $("#button1").click(function(){
+                        $("#test").hide();
+                    });
+                    });
+            </code>
+            </pre>
+        
+        <p>Results:</p>
+        <p>
+            <script>
+                 $(document).ready(function(){
+                $("#button1").click(function(){
+                    $("#test").hide();
+                });
+                });
+                
+            </script>
+        </p>
+        <h3 id="test">id selector</h3>
+        <button id="button1">id selector for h3</button>
+
+        <br>
+        <br>
+
+    </div>
+
+    <br>
+
+    <!-- jQuery Class Selector -->
+    <div id="3" class="container">
+        <br>
+        <h2>The Class Selector</h2>
+        <hr>
+        <b>The .class Selector</b>
+
+            -The jQuery .class selector finds elements with a specific class.
+
+            -To find elements with a specific class, write a period character, followed by the name of the class
+
+        
+        <pre>
+            <code>
+                
+                $(document).ready(function(){
+                    $("#button2").click(function(){
+                      $(".test1").hide();
+                    });
+                  });
+            </code>
+            </pre>
+        
+        <p>Results:</p>
+        <p>
+            <script>
+               $(document).ready(function(){
+                  $("#button2").click(function(){
+                    $(".test1").hide();
+                  });
+                });
+            </script>
+        </p>
+        <h5 class="test1">class selector</h5>
+            <button id="button2">class selector for h5</button>
+        <br>
+        <br>
+        
+        </div>
+
+</body>
+
+</html>

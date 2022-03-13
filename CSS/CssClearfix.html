@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+</style>
+</head>
+<body>
+
+<h2>Without Clearfix</h2>
+
+<p>This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:</p>
+
+<div>
+  <img class="img1" src="workplace.jpg" alt="workplace" width="170" height="170">
+  If a floated element is taller than the containing element, it will "overflow" outside of its container. We can then add a clearfix hack to solve this problem
+</div>
+
+<h2 style="clear:right">With Clearfix</h2>
+<p>We can fix this by adding a clearfix class with overflow: auto; to the containing element:</p>
+
+<div class="clearfix">
+  <img class="img2" src="workplace.jpg" alt="workplace" width="170" height="170">
+  If a floated element is taller than the containing element, it will "overflow" outside of its container. We can then add a clearfix hack to solve this problem
+</div>
+
+</body>
+</html>

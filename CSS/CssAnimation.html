@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  0%   {background-color:aqua; left:0px; top:0px;}
+  10%   {background-color:blueviolet; left:50px; top:50px;}
+  25%  {background-image: url("www.jpg"); left:500px; top:0px;}
+  50%  {background-image: url("img5.jpg"); left:200px; top:200px;}
+  66%  {background-image: url("img6.jpg"); left:300px; top:100px;}
+  75%  {background-image: url("workplace.jpg"); left:0px; top:200px;}
+  100% {background-image: url("img6.jpg"); left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+<pre>
+CSS Animations
+CSS allows animation of HTML elements without using JavaScript or Flash!
+In this chapter you will learn about the following properties:
+
+@keyframes-Specifies the animation code
+animation-name-Specifies the name of the @keyframes animation
+animation-duration-Specifies how long time an animation should take to complete one cycle
+animation-delay-Specifies a delay for the start of an animation
+animation-iteration-count-Specifies the number of times an animation should be played
+animation-direction-Specifies whether an animation should be played forwards, backwards or in alternate cycles
+animation-timing-function-Specifies the speed curve of the animation
+animation-fill-mode-Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
+animation-A shorthand property for setting all the animation properties
+</pre>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<img src="img2.jpg" style="height:50px;width:50px;"></div>
+
+<hr>
+<div></div>
+
+</body>
+</html>

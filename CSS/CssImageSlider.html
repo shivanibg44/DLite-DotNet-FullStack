@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+            #slider {
+	overflow: hidden;
+}
+
+@keyframes slider {
+    0%{
+    margin-left: 0;
+  }
+  25%
+  {
+      margin-left: -50%;
+  }
+  50%
+  {
+      margin-left: -100%;
+  }
+  75%
+  {
+     margin-left:  -200%;
+  }
+  100%{
+    margin-left: -300%;
+  }
+}
+#slider figure {
+	width:333%;
+	position:relative;
+	animation: 7s slider infinite;
+}
+
+#slider figure:hover {
+	/*animation-play-state: paused; /*enable for pause on hover*/
+}
+#slider figure img {
+	width: 33.333333333%;
+	height : 30%;
+	float: left;
+}
+.container{
+  max-width: 1500px;
+  width: 500%;
+  height:auto;
+  
+  overflow: hidden;
+}
+
+
+
+            </style>
+    </head>
+    <body>
+        <div class="container" id="slider"" >
+            <figure>
+                  <img src="IMG1.jpg">
+                  <img src="img2.jpg">
+                  <img src="img3.jpg">
+            </figure>
+      </div>
+    </body>
+</html>

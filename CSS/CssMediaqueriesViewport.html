@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-color: red;
+  color: black;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+    color: white;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: green;
+    color:aqua;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Resize the browser window to see the effect!</h1>
+<p>By default, the background color of the document is "red". If the screen size is 992px or less, the color will change to "blue". If it is 600px or less, it will change to "green".</p>
+<hr>
+<div>
+<img src="IMG1.jpg" style="width: 200px;height: 200px;float: left;"/>
+<p>
+  The viewport is the user's visible area of a web page.
+
+The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
+
+Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. 
+
+To fix this, browsers on those devices scaled down the entire web page to fit the screen.
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+</p>
+</div>
+</body>
+</html>

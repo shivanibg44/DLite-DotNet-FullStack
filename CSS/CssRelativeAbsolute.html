@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <style>
+                    .box-orange {
+
+ background: orange;
+  width: 100px;
+  height: 100px;  
+}
+.box-blue {
+  position:static;
+  background: lightskyblue;
+  height: 100px;
+  width: 100px;
+  
+   
+}
+            .box-orange1 {
+
+position:relative;  background: orange;
+  width: 100px;
+  height: 100px;
+  top:100px;
+  left:100px;
+  
+}
+.box-blue1 {
+  position:static;
+  background: lightskyblue;
+  height: 100px;
+  width: 100px;
+   
+}
+
+.box-orange2 {
+  position: absolute;
+  background: orange;
+  width: 100px;
+  height: 100px;
+  left:50px;
+}
+
+  .box-blue2 {
+  position:static;
+  background: lightskyblue;
+  height: 100px;
+  width: 100px;
+   
+
+}
+        </style>
+    </head>
+<body>
+    <body>
+        <p>position: static is the default value. Whether we declare it or not, elements are positioned in a normal order on the webpage</p>
+        <div class="container">
+            <div class="box-orange"></div>
+            <div class="box-blue"></div>
+        </div>
+        <hr>
+        <p>position: relative: An element’s new position relative to its normal position.
+
+            Starting with position: relative and for all non-static position values, we are able to change an element’s default position by using the helper properties that I've mentioned above.</p>
+
+        <div class="container">
+            <div class="box-orange1"></div>
+            <div class="box-blue1"></div>
+        </div>
+
+        <hr>
+        <p>In position: relative, the element is positioned relative to itself. However, an absolutely positioned element is relative to its parent.
+
+            An element with position: absolute is removed from the normal document flow. It is positioned automatically to the starting point (top-left corner) of its parent element. If it doesn’t have any parent elements, then the initial document <html> will be its parent.
+            
+            Since position: absolute removes the element from the document flow, other elements are affected and behave as the element is removed completely from the webpage.</p>
+
+        <div class="container">
+            <div class="box-orange2"></div>
+            <div class="box-blue2"></div>
+        </div>
+
+       
+  <p>Absolute: Absolute positioning an HTML element positions the element to its nearest positioned parent. Thus it refers to the nearest parent’s position.</p>
+   <p>Relative: Making an HTML element relative, gives you the privilege to move the element from its current position. It does not refer to a different element’s position.</p>   
+        <div style="position: relative;background: blueviolet;margin-top: 100px;width: 100px;height: 100px;margin-left: 50px;">
+          hello
+            <div style="background: chartreuse;position:absolute;width:100px;height: 100px;margin-left:10px;">hru</div>
+           </div>
+
+           <div style="background: chartreuse;position:absolute;width:100px;height: 100px;margin-left:30px;">hru</div>
+
+           <div style="background:crimson;position:relative;z-index:-1;width:100px;height: 100px;margin-left:10px;">hru</div>
+    
+
+
+
+     
+</body>
+
+</html>

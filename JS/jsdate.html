@@ -1,0 +1,115 @@
+<html>
+    <body>
+        <p>
+            The JavaScript date object can be used to get year, month and day. You can display a timer on the webpage by the help of JavaScript date object.
+
+You can use different Date constructors to create date object. It provides methods to get and set day, month, year, hour, minute and seconds.
+        </p>
+        <hr>
+        <pre>
+            Constructor
+            You can use 4 variant of Date constructor to create date object.
+            
+            Date()
+            Date(milliseconds)
+            Date(dateString)
+            Date(year, month, day, hours, minutes, seconds, milliseconds)
+        </pre>
+        <hr>
+        Current Date and Time: <span id="txt"></span>  
+<script>  
+var today=new Date();  
+document.getElementById('txt').innerHTML=today;
+  
+</script>  
+<hr>
+<script>  
+    var date=new Date();  
+    var day=date.getDate();  
+    var month=date.getMonth()+1;  
+    var year=date.getFullYear();  
+    document.write("<br>Date is: "+day+"/"+month+"/"+year);  
+    </script>  
+    <hr>
+
+
+
+
+    Current Time: <span id="txt1"></span>  
+<script>  
+var today=new Date();  
+var h=today.getHours();  
+var m=today.getMinutes();  
+var s=today.getSeconds();  
+document.getElementById('txt1').innerHTML=h+":"+m+":"+s;  
+</script>  
+<hr>
+
+
+
+
+Current Time: <span id="txt2"></span>  
+<script>  
+window.onload=function()
+{
+    getTime();
+}  
+function getTime()
+{  
+var today=new Date();  
+var h=today.getHours();  
+var m=today.getMinutes();  
+var s=today.getSeconds();  
+// add a zero in front of numbers<10  
+m=checkTime(m);  
+s=checkTime(s);  
+document.getElementById('txt2').innerHTML=h+":"+m+":"+s;  
+setTimeout(function()
+{
+    getTime()
+},1000);//1 second  
+}  
+//setInterval("getTime()",1000);//another way  
+function checkTime(i){  
+if (i<10){  
+  i="0" + i;  
+ }  
+return i;  
+}  
+</script>  
+<hr>
+   
+<p> This is an example of getting the difference between two dates using JavaScript. </p> 
+<p>Here, first, we are defining two dates by using the new date(), then we calculate the time difference between both specified dates by using the inbuilt getTime(). Then we calculate the number of days by dividing the difference of time of both dates by the no. of milliseconds in a day that are (1000*60*60*24).
+
+    Here the variable d1 stores the first date, and variable d2 stores the second date. The variable diff stores the difference between the time, and the variable daydiff stores the difference between the dates.</p> 
+<script>  
+var d1 = new Date("08/14/2020");   
+var d2 = new Date("09/14/2020");   
+
+var diff = d2.getTime() - d1.getTime();   
+
+var daydiff = diff / (1000 * 60 * 60 * 24);   
+document.write(" Total number of days between <b> " + d1 + " </b> and <b> " + d2 + " </b> is: <b> " + daydiff + " days </b>" );   
+</script> 
+<hr>
+  
+		<p> This is an example of getting the difference between two dates using JavaScript. </p>
+        <p>Here the variable d1 stores the first date, and variable d2 stores the present date. The variable diff stores the difference between the time of both dates, and the variable daydiff stores the difference between the dates. Using this approach, we can also find the age of a person.</p>
+<script>
+
+var d1 = new Date("10/02/1969"); 
+var d2 = new Date(); 
+var diff = d2.getTime() - d1.getTime(); 
+
+var daydiff = (diff / 31536000000).toFixed(0);   
+document.write(" Total numbers of years since <b> 2nd October 1969 </b> is: <b> " + daydiff + " years </b>" ); 
+</script> 
+<hr>
+
+
+
+    </body>
+    
+
+</html>

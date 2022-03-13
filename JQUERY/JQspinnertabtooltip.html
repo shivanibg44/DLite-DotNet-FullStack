@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Spinner functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/mint-choc/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style type = "text/css">
+         #spinner-1 input {width: 100px}
+      </style>
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#spinner-1" ).spinner({
+               icons: {
+                  down: "custom-down-icon", up: "custom-up-icon"
+               }});
+         });
+
+
+      </script>
+   </head>
+   
+   <body>
+       <pre>
+         Spinner widget adds a up/down arrow to the left of a input box thus allowing a user to increment/decrement a value in the input box. 
+         
+         It allows users to type a value directly, or modify an existing value by spinning with the keyboard, mouse or scrollwheel.
+         
+         It also has a step feature to skip values. 
+
+         In addition to the basic numeric features, it also enables globalized formatting options
+         
+         (ie currency, thousand separator, decimals, etc.)thus providing a convenient internationalized masked entry box.
+           </pre>
+      <!-- HTML --> 
+      <div id = "example">
+         <input type = "text" id = "spinner-1" value = "0" />
+      </div>
+      <hr>
+      <script>
+        $(function() {
+           $( "#spinner-2" ).spinner({
+              min: -10, 
+              max: 10
+              
+           });
+           $('#spinner-3').spinner({
+              step: 10, 
+              min: -1000000, 
+              max: 1000000
+           });
+        });
+        </script>
+
+<div id = "example">
+    Spinner Min, Max value set:
+    <input type = "text" id = "spinner-2" value = "0" /><br><br>
+    Spinner increments/decrements in step of of 100:
+    <input type = "text" id = "spinner-3" value = "0" />
+ </div>
+   </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <style>
+      
+        /* style to set body of page */
+        body {
+            width:100%; 
+            margin:auto;
+        }
+        .gallery {
+            width:100%;
+            display:flex;
+            flex-flow: row wrap;
+        }
+        /*The flex-basis CSS property sets the initial main size of a flex item. 
+        It sets the size of the content box unless otherwise set with box-sizing.*/
+        .box {
+            flex-basis:20%;
+            width:100%;
+            padding:10px;
+            margin:8px;
+            box-shadow: 1px 1px 1px 1px blueviolet;
+        }
+        .text {
+            text-align:center;
+            margin-top:5px;
+        }
+        .image:hover {
+            border: 5px;
+            border-style: groove;
+            border-color: goldenrod;
+          
+        }
+          
+        /* media query used here */
+        @media only screen and (max-width: 300px) { 
+            .box {
+                flex-basis: 100%;
+            }
+        }
+          
+        @media only screen and (max-width:500px) {
+            .box {
+                flex-basis: 40%;
+            }
+        }
+    </style>
+</head>
+  
+<body>
+    <div class = "gallery">
+        <div class = "box">
+            <div class = "image">
+                <a target="_blank" href="www.jpg">
+                    <img src ="www.jpg" width = "300" height = "300">
+                </a>
+            </div>
+              
+            <div class = "text">
+               WWW
+            </div>
+        </div>
+      
+        <div class = "box">
+            <div class = "image">
+                <a target="_blank" href="IMG1.jpg">
+                    <img src ="IMG1.jpg" width = "300" height = "300">
+                </a>
+            </div>
+              
+            <div class = "text">
+                HTML
+            </div>
+        </div>
+          
+        <div class = "box">
+            <div class = "image">
+                <a target="_blank" href="img2.jpg">
+                    <img src = "img2.jpg"  width = "300" height = "300">
+                </a>
+            </div>
+              
+            <div class = "text">
+                CSS
+            </div>
+        </div>
+</body>
+  
+</html>                       

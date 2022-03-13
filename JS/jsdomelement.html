@@ -1,0 +1,82 @@
+<html>  
+<head> <h5>DOM Methods </h5> </head>  
+<body>
+    
+    
+
+
+<div class="Class">  
+This is a simple class implementation  
+</div>  
+<script type="text/javascript">  
+var x=document.getElementsByClassName('Class');  
+document.write("On calling x, it will return an array-like object: <br>"+x);  
+</script>
+
+
+
+
+
+<hr>
+<script type="text/javascript">  
+    function totalelements()  
+    {  
+    var allgenders=document.getElementsByName("gender");  
+    alert("Total Genders:"+allgenders.length);  
+    }  
+    </script>  
+    <form>  
+    Male:<input type="radio" name="gender" value="male">  
+    Female:<input type="radio" name="gender" value="female">  
+      
+    <input type="button" onclick="totalelements()" value="Total Genders">  
+    </form>  
+    <hr>
+
+
+
+
+
+
+    <script type="text/javascript">  
+        function countpara()
+        {  
+        var totalpara=document.getElementsByTagName("p");  
+        alert("total p tags are: "+totalpara.length);  
+          
+        }  
+        </script>  
+        <p>This is a pragraph</p>  
+        <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+        <p>Let's see the simple example</p>  
+        <button onclick="countpara()">count paragraph</button> 
+        <hr>
+
+
+
+
+
+
+        
+        <script type="text/javascript" >  
+            function validate() 
+            {  
+            var msg;  
+            if(document.myForm.userPass.value.length>5)
+            {  
+            msg="good";  
+            }  
+            else
+            {  
+            msg="poor";  
+            }  
+            document.getElementById('mylocation').innerText=msg;  
+             }  
+              
+            </script>  
+            <form name="myForm">  
+            <input type="password" value="" name="userPass" onkeyup="validate()">  
+            Strength:<span id="mylocation">no strength</span>  
+            </form>  
+</body>  
+</html>  

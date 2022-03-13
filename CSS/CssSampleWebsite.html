@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img:hover {
+  opacity: 0.5;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+ Fake image 
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>G2TECHSOFT</h1>
+</div>
+
+<div class="topnav">
+  <a href="img1.jpg">HTML</a>
+  <a href="img2.jpg">CSS</a>
+  <a href="img3.jpg">JAVASCRIPT</a>
+  <a href="workplace.jpg" style="float:right">HOME</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>HTML</h2>
+      <h5>HYERTEXT MARKUP LANGUAGE</h5>
+      <div class="fakeimg" style="height:100px;"><img src="img1.jpg" style="height:100px;width:250px;"/></div>
+      <p>Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. 
+
+A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. 
+
+HTML is not considered a programming language as it can�t create dynamic functionality. 
+
+Instead, with HTML, web users can create and structure sections, paragraphs, and links using elements, tags, and attributes. 
+
+Here are some of the most common uses for HTML:
+
+Web development. Developers use HTML code to design how a browser displays web page elements, such as text, hyperlinks, and media files.
+ 
+Internet navigation. Users can easily navigate and insert links between related pages and websites as HTML is heavily used to embed hyperlinks.
+ 
+Web documentation. HTML makes it possible to organize and format documents, similarly to Microsoft Word.
+
+It�s also worth noting that HTML is now considered an official web standard. 
+
+The World Wide Web Consortium (W3C) maintains and develops HTML specifications, along with providing regular updates.
+</p>
+
+    </div>
+    <div class="card">
+      <h2>CSS</h2>
+      <h5>CASCADING STYLE SHEET</h5>
+      <div class="fakeimg" style="height:100px;"><img src="img2.jpg" style="height:100px;width:250px;"/></div>
+      <p>
+Stands for "Cascading Style Sheet."
+ 
+Cascading style sheets are used to format the layout of Web pages. 
+
+They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.
+
+CSS helps Web developers create a uniform look across several pages of a Web site.
+
+ Instead of defining the style of each table and each block of text within a page's HTML, commonly used styles need to be defined only once in a CSS document. 
+
+Once the style is defined in cascading style sheet, it can be used by any page that references the CSS file. 
+
+Plus, CSS makes it easy to change styles across several pages at once.
+
+ For example, a Web developer may want to increase the default text size from 10pt to 12pt for fifty pages of a Web site. 
+
+If the pages all reference the same style sheet, the text size only needs to be changed on the style sheet and all the pages will show the larger text.
+
+While CSS is great for creating text styles, it is helpful for formatting other aspects of Web page layout as well. 
+
+For example, CSS can be used to define the cell padding of table cells, the style, thickness, and color of a table's border, and the padding around images or other objects.
+ 
+CSS gives Web developers more exact control over how Web pages will look than HTML does. 
+
+This is why most Web pages today incorporate cascading style sheets.
+</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>WWW</h2>
+      <div class="fakeimg" style="height:150px;"><img src="www.jpg" style="height:100px;width:150px;"/></div>
+      <p>WORLD WIDE WEB</p>
+    </div>
+    <div class="card">
+      <h3>TECHNOLOGIES</h3>
+      <div class="fakeimg"><p><img src="img1.jpg" style="height:50px;width:50px;"/></p></div>
+      <div class="fakeimg"><p><img src="img2.jpg" style="height:50px;width:50px;"/></p></div>
+      <div class="fakeimg"><p><img src="img3.jpg" style="height:50px;width:50px;"/></p></div>
+    </div>
+    <div class="card">
+      <h3>CONTACT</h3>
+      <p>G2TECHSOFT</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="https://www.g2techsoft.com">www.g2techsoft.com</a><br>
+  <a href="mailto:g2techsoft@gmail.com">contact us via mail</a>
+</div>
+
+</body>
+</html>

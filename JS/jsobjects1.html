@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>OBJECT</h1>
+        <p>Object– An Object is a unique entity which contains property and methods. For example “car” is a real life Object, which have some characteristics like color, type, model, horsepower and performs certain action like drive. The characteristics of an Object are called as Property, in Object Oriented Programming and the actions are called methods. An Object is an instance of a class. Objects are everywhere in JavaScript almost every element is an Object whether it is a function,arrays and string. </p>
+        <script>
+        //Defining object
+let person = 
+{
+    first_name:'Paul',
+    last_name: 'Walker',
+  
+    //method
+    getFunction : function()
+    {
+        return ("The name of the person is: "+person.first_name+" " +person.last_name);
+    },
+    //object within object
+    phone_number : 
+    {
+        mobile:'987654321',
+        landline:'2266789'
+    }
+}
+
+console.log(person.getFunction()); 
+
+console.log(person.phone_number.landline);
+</script>
+    </body>
+
+</html>

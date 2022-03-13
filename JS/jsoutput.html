@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<pre>
+JavaScript can "display" data in different ways:
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+</pre>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+<hr>
+<script>
+document.write("DOCUMENT WRITE");
+</script>
+<hr>
+<script>
+window.alert("WINDOW ALERT!!!");
+</script>
+<hr>
+<h2>Activate Debugging</h2>
+
+<p>F12 on your keybord will activate debugging.</p>
+<p>Then select "Console" in the debugger menu.</p>
+<p>Then click Run again.</p>
+<script>
+console.log(5 + 6);
+</script>
+<hr>
+<h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+
+
+
+</body>
+</html> 

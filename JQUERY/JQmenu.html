@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Menu functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/mint-choc/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style>
+         .ui-menu {
+            width: 200px;
+            
+         }
+      </style>
+      <!-- Javascript -->
+      
+      <script>
+        // $(function() {
+         //   $( "#menu-1" ).menu();
+         //});
+         $(function() {
+            $( "#menu-1" ).menu({
+               icons: { submenu: "ui-icon-circle-triangle-e"},
+               position: { my: "right top", at: "right-200 top+5" } //default value is:$( ".selector" ).menu ({ position: { my: "left top", at: "right-5 top+5" } });
+            });
+            //$( "#menu-1" ).menu();
+            //$( "#menu-1" ).menu("disable");
+         });
+      </script>
+   </head>
+   
+   <body>
+       <h1>MENU UI</h1>
+       <pre>
+           
+        A menu widget usually consists of a main menu bar with pop up menus. Items in pop up menus often have sub pop up menus. 
+           
+        A menu can be created using the markup elements as long as the parent-child relation is maintained (using ul or ol). 
+            
+        Each menu item has an anchor element.
+
+        The Menu Widget in jQueryUI can be used for inline and popup menus, or as a base for building more complex menu systems.
+        
+        For example, you can create nested menus with custom positioning.
+        
+        jQueryUI provides menu() methods to create a menu.
+    
+        Syntax
+                $(selector, context).menu (options);
+    
+    </pre>
+      <!-- HTML --> 
+      <ul id = "menu-1">
+         <li><a href = "https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+         <li><a href = "https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+         <li><a href = "https://en.wikipedia.org/wiki/JavaScript">Javascript</a>
+            <ul>
+               <li><a href = "https://www.javatpoint.com/javascript-oops-classes">OOPS</a></li>
+               <li><a href = "https://www.javatpoint.com/javascript-form-validation">Validation</a></li>
+               <li><a href = "https://www.javatpoint.com/javascript-form-validation">DOM</a></li>
+            </ul>
+         </li>
+         <li><a href = "https://en.wikipedia.org/wiki/JQuery">jQuery</a></li>
+         <li><a href = "https://en.wikipedia.org/wiki/Bootstrapping_(disambiguation)">Bootstrap</a></li>
+      </ul>
+   </body>
+</html>

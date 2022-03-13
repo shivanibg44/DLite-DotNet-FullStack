@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.dotted {border-style: dotted;border-width: 5px;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;color:red}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;border-color: red green blue yellow;border-width:15px}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+#car{
+height:50%;
+width:50%;
+margin:300px 300px 200px 300px;
+border-style:dotted dashed solid double ;
+border-width: 20px 10px 3px 2px;
+
+border-radius:20px;
+border-color:green;
+padding:10px;
+}
+</style>
+</head>
+<body>
+
+<h2>The border-style Property</h2>
+<p>
+The CSS border properties allow you to specify the style, width, and color of an element's border.<br>
+The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).<br>
+This property specifies what kind of border,width and color to display:</p>
+
+<p class="dotted">A dotted border.</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="groove">A groove border.</p>
+<p class="ridge">A ridge border.</p>
+<p class="inset">An inset border.</p>
+<p class="outset">An outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+
+<img id="car" src="IMG1.jpg" alt="car">
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/le-frog/jquery-ui.css"
+         rel = "stylesheet">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+ // $( function() {
+  //  $( "#accordion" ).accordion();
+ // } );
+  $(function() {
+            $( "#accordion" ).accordion({
+               collapsible: true
+          });
+         });
+  </script>
+  <style>
+    #accordion{
+      font-size: 14px;
+      background-color: rgb(199, 245, 245);
+      color:rgb(88, 24, 207);
+      text-align: center;
+      font-family: fantasy;
+      border-radius: 20px;
+    }
+ </style>
+ 
+</head>
+<body>
+  <h1>JQUERY UI</h1>
+  <pre>
+    JqueryUI is the most popular front end frameworks currently. 
+    
+    It is sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+    
+    It uses HTML, CSS and Javascript.
+
+    JqueryUI is a powerful Javascript library built on top of jQuery JavaScript library. 
+    
+    UI stands for User interface. 
+    
+    It is a set of plug-ins for jQuery that adds new functionalities to the jQuery core library.
+
+    The set of plug-ins in JqueryUI includes interface interactions, effects, animations, widgets, and themes built on top of jQuery JavaScript Library.
+
+    It was released in September 2007, announced in a blog post by John Resig on jquery.com. 
+
+    The latest release, 1.10.4, requires jQuery 1.6 or later version. 
+    
+    jQuery UI is a free, open source software, licensed under the MIT License.
+
+    Features:
+
+        JqueryUI is categorized into four groups, interactions, widgets, effects, utilities. 
+
+        Seminar on interactions,effects and utilities by Trainees.(Simple examples)
+
+<img src="jqueryui.jpg" height="400px" width="600px">
+  </pre>
+    <h1>ACCORDION</h1>
+    <pre>
+        Accordion Widget in jQueryUI is a jQuery based expandable and collapsible content holder that is broken into sections and probably looks like tabs. 
+        jQueryUI provides accordion() method to achieve this.
+
+        Syntax
+            $(selector, context).accordion (options);
+    </pre>
+   <hr>
+ 
+<div id="accordion">
+  <h3>SESSION 1</h3>
+  <div>
+    <p>
+    HTML
+    </p>
+  </div>
+  <h3>SESSION 2</h3>
+  <div>
+    <p>
+    CSS
+    </p>
+  </div>
+  <h3>SESSION 3</h3>
+  <div>
+    <p>
+    JAVASCRIPT
+    </p>
+    <ul>
+      <li>JS BASICS</li>
+      <li>JS OOPS</li>
+      <li>JS VALIDATION</li>
+    </ul>
+  </div>
+  <h3>SESSION 4</h3>
+  <div>
+    <p>
+   JQUERY
+    </p>
+    <p>
+    BOOTSTRAP
+    </p>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>

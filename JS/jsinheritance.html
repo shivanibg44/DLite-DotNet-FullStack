@@ -1,0 +1,81 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>INHERITANCE</h1>
+        <pre>
+            The JavaScript inheritance is a mechanism that allows us to create new classes on the basis of already existing classes. It provides flexibility to the child class to reuse the methods and variables of a parent class.
+
+The JavaScript extends keyword is used to create a child class on the basis of a parent class. It facilitates child class to acquire all the properties and behavior of its parent class.
+
+Points to remember
+It maintains an IS-A relationship.
+The extends keyword is used in class expressions or class declarations.
+Using extends keyword, we can acquire all the properties and behavior of the inbuilt object as well as custom classes.
+The super keyword refers to the parent class. It is used to call the constructor of the parent class and to access the parent's properties and methods.
+
+        </pre>
+       
+       <script>
+            //Inhertiance example
+            class Bike
+{
+  constructor()
+  {
+    this.company="Honda";
+  }
+}
+class Vehicle extends Bike 
+{
+  constructor(name,price)
+   {
+     //By calling the super() method in the constructor method,
+     // we call the parent's constructor method and gets access to the parent's properties and methods
+   super();
+    this.name=name;
+    this.price=price;
+  } 
+}
+var v = new Vehicle("Shine","70000");
+document.writeln(v.company+" "+v.name+" "+v.price);
+            </script>
+            <hr>
+
+
+
+            <script>
+                class Moment extends Date 
+                {
+                  constructor() 
+                  {
+                    super();
+                  }
+                }
+                var m=new Moment();
+                document.writeln("Current date:");
+                //In the JavaScript Date object, when you call getMonth() it returns the month but it counts from 0.
+                document.writeln(m.getDate()+"-"+(m.getMonth()+1)+"-"+m.getFullYear());
+                </script>
+                <hr>
+
+
+
+                
+    </body>
+</html>
+
+class emp
+{
+  add()
+  {
+    int c=10+20;
+    cout<<c;
+  }
+  add(int a,int b)
+  {
+    int x=a;
+    int y=b;
+    int z=x+y;
+    cout<<z;
+  }
+}

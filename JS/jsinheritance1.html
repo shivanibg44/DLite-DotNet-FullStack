@@ -1,0 +1,44 @@
+<html>
+<body>
+<script>
+class bank
+{
+constructor(acc_number,ifsc_code,branch)
+{
+this.acc_number=acc_number;
+this.ifsc_code=ifsc_code;
+this.branch=branch;
+this.account_type="savings";
+
+}
+getdetails()
+{
+return "the account number is "+this.acc_number;
+}
+}
+class atm extends bank
+{
+constructor(acc_number,ifsc_code,branch,atm_card,balance)
+{
+super(acc_number,ifsc_code,branch);
+this.atm_card=atm_card;
+this.balance=balance;
+
+}
+
+}
+
+
+var a= new atm(1600997766,"IDFC0002","chennai","visa",20000);
+document.write(a.acc_number+"<br>");
+document.write(a.ifsc_code+"<br>");
+document.write(a.branch+"<br>");
+document.write(a.getdetails()+"<br>");
+document.write(a.account_type+"<br>");
+document.write(a.atm_card+"<br>");
+document.write(a.balance+"<br>");
+
+
+</script>
+</body>
+</html>

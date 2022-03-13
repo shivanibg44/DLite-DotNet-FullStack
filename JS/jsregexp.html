@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Do a global search for the character "h" in a string:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Is this all there is?";
+let result = text.match(/[h]/g);
+document.getElementById("demo").innerHTML = result;
+</script>
+<hr>
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Do a global search for the numbers 1 to 4 in a string:</p>
+
+<p id="demo1"></p>
+
+<script>
+let text = "123456789";
+let result = text.match(/[1-4]/g);
+document.getElementById("demo1").innerHTML = result;
+</script>
+<hr>
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Do a global search for any of the specified alternatives (red|green):</p>
+
+<p id="demo2"></p>
+
+<script>
+let text = "re, green, red, green, gren, gr, blue, yellow";
+let result = text.match(/(red|green)/g);
+document.getElementById("demo2").innerHTML = result;
+</script>
+<hr>
+<script>
+    //To check a password between 7 to 16 characters which contain only characters, 
+    //numeric digits, underscore and first character must be a letter
+    function CheckPassword(inputtxt) 
+{ 
+    //
+var passw=  /^[A-Za-z]\w{7,14}$/;
+if(inputtxt.value.match(passw)) 
+{ 
+alert('Correct, try another...')
+return true;
+}
+else
+{ 
+alert('Wrong...!')
+return false;
+}
+}
+/*
+^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$
+
+^                                   # start of line
+  (?=.*[0-9])                       # positive lookahead, digit [0-9]
+  (?=.*[a-z])                       # positive lookahead, one lowercase character [a-z]
+  (?=.*[A-Z])                       # positive lookahead, one uppercase character [A-Z]
+  (?=.*[!@#&()–[{}]:;',?/*~$^+=<>]) # positive lookahead, one of the special character in this [..]
+  .                                 # matches anything
+  {8,20}                            # length at least 8 characters and maximum of 20 characters
+$                                   # end of line
+*/
+
+    </script>
+    <form name="form1" action="#">
+    <input type='text' name='text1'/>
+    <input type="submit" name="submit" value="Submit" onclick="CheckPassword(document.form1.text1)"/>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<title>GridWebsiteLayout</title>
+<style>
+    /*A fraction (1fr) is a part of an entire row. 
+    So if you divide your grid into 3×4, as in the example below from CSS Tricks, then 1fr = ¼ or 25%. */
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "nav footer footer";
+  grid-template-rows: 80px 20fr 70px;  
+  grid-auto-columns: 20% 1fr 25%;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+header, footer, article, nav, div {
+  padding: 20px;
+  background: gold;
+}
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainArticle { 
+  grid-area: article;      
+}
+#mainNav { 
+  grid-area: nav; 
+}
+#siteAds { 
+  grid-area: ads; 
+}
+</style>
+<body>
+  <header id="pageHeader">Header</header>
+  <article id="mainArticle">Article<br>The grid-template-areas allows us to use a kind of "ASCII art" to create each named grid area within our grids.
+    You simply write out the grid exactly how it should appear in the browser. 
+    You do this using string values across one or more lines. Each line represents a row, and each cell within the string represents a column.
+    You can repeat cell names to create a grid area that takes up multiple cells. This is how we did the header, footer, and nav area in the above example.
+    So we can easily see from the above code that the grid contains 3 rows, 3 columns, 9 grid cells, and 5 named grid areas.</article>
+  <nav id="mainNav">Nav</nav>
+  <div id="siteAds">Ads</div>
+  <footer id="pageFooter">Footer</footer>
+</body>

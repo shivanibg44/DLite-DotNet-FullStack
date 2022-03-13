@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+
+//$(selector).animate({params},speed,callback);
+
+//The following example demonstrates a simple use of the animate() method; it moves a <div> element to the right, until it has reached a left property of 250px
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#ani1").animate({left: '250px'});
+  });
+});
+</script> 
+
+
+<script> 
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#ani").animate({left: '500px'});
+      });
+    });
+    </script>
+
+    //jQuery animate() - Manipulate Multiple Properties
+
+<script> 
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#mani").animate({
+          left: '250px',
+          opacity: '0.5',
+          height: '100px',
+          width: '100px'
+        });
+      });
+    });
+    </script> 
+
+<script> 
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#growani").animate({
+          left: '250px',
+          height: '+=50px',
+          width: '+=50px'
+        });
+      });
+    });
+    </script>
+    
+    <script> 
+    //toggle
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#toggle").animate({
+              height: 'toggle'  //width: 'toggle'
+            });
+          });
+        });
+        </script> 
+
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:50px;width:50px;position:absolute;" id="ani1"></div>
+<hr>
+<div style="background:#c4157b;height:50px;width:50px;position:absolute;margin-top: 100px;" id="mani"></div>
+
+<div style="background:#09e264;height:10px;width:10px;position:absolute;margin-top: 200px;" id="growani"></div>
+
+<div style="background:#5a05e4;height:100px;width:100px;position:absolute;margin-top: 300px;" id="toggle"></div>
+
+<img src="img4.jpg" width="100px" height="100px" style="position:absolute;margin-top: 400px;" id="ani"/>
+
+
+
+</body>
+</html>

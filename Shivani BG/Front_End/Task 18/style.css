@@ -1,0 +1,19 @@
+body{
+    font-size: 22px;
+    background-image: url("1.jpg");
+  background-repeat: no-repeat ;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
+.container{
+    background-color:rgb(225, 226, 140);
+    color: rgb(19, 18, 18);
+    border-radius: 0px;
+    margin-top: 100px;
+}
+pre{
+    background-color: rgb(182, 165, 165);
+    color: white;
+    border-radius: 0px;
+}

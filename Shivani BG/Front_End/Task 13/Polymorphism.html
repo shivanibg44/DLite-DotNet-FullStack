@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS Polymorphism</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">JAVASCRIPT CONCEPTS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">PROTOTYPE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inheritance.html">INHERITANCE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Polymorphism.html">POLYMORPHISM</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        <br>
+        <h1>POLYMORPHISM</h1>
+    
+    
+        <p>CODE</p>
+        <pre>
+            <code>
+                class Animal {
+                    display() {
+                        return "Animal";
+                    }
+                }
+                class Dog extends Animal {
+
+                }
+
+                var dog = new Dog();
+                document.write(dog.display());
+            </code>
+        </pre>
+        <p>Results: </p>
+        <p>
+            <script>
+                class Animal {
+                    display() {
+                        return "Animal";
+                    }
+                }
+                class Dog extends Animal {
+
+                }
+
+                var dog = new Dog();
+                document.write(dog.display());
+
+            </script>
+        </p>
+        <br>
+    </div>
+    <br>
+
+    <div class="container">
+        <h1>POLYMORPHISM</h1>
+        
+       
+        <p>CODE</p>
+        <pre>
+            <code>
+                var vehicle = function() {}
+
+                vehicle.prototype.select = function() {
+                    return "Car";
+                }
+
+                var bmw = function() {}
+
+                bmw.prototype=Object.create(vehicle.prototype);
+                bmw.prototype.select=function(){
+                    return "BMW";
+                }
+
+                var audi=function(){}
+
+                audi.prototype=Object.create(vehicle.prototype);
+                audi.prototype.select=function(){
+                    return "Audi";
+                }
+
+                var tesla=function(){}
+
+                tesla.prototype=Object.create(vehicle.prototype);
+
+                var vehicles=[new vehicle(),new bmw(),new audi(),new tesla()];
+
+                for(var i=0;i<vehicles.length;i++){
+                    document.write(vehicles[i].select()+"<br>");
+                }
+            </code>
+        </pre>
+        <p>Results: </p>
+        <p>
+            <script>
+                var vehicle = function () { }
+
+                vehicle.prototype.select = function () {
+                    return "Car";
+                }
+
+                var bmw = function () { }
+
+                bmw.prototype = Object.create(vehicle.prototype);
+                bmw.prototype.select = function () {
+                    return "BMW";
+                }
+
+                var audi = function () { }
+
+                audi.prototype = Object.create(vehicle.prototype);
+                audi.prototype.select = function () {
+                    return "Audi";
+                }
+
+                var tesla = function () { }
+
+                tesla.prototype = Object.create(vehicle.prototype);
+
+                var vehicles = [new vehicle(), new bmw(), new audi(), new tesla()];
+
+                for (var i = 0; i < vehicles.length; i++) {
+                    document.write(vehicles[i].select() + "<br>");
+                }
+            </script>
+            <br>
+    </div>
+
+</body>
+
+</html>

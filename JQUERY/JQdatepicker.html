@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Datepicker functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#datepicker-1" ).datepicker();
+         });
+        
+         $(function() {
+            $( "#datepicker-2" ).datepicker();
+         });
+      
+         $(function() {
+            $( "#datepicker-3" ).datepicker({
+               appendText:"(yy-mm-dd)",
+               dateFormat:"yy-mm-dd",
+               altField: "#datepicker-4",
+               altFormat: "DD, d MM, yy"
+            });
+         });
+
+         $(function() {
+            $( "#datepicker-5" ).datepicker({
+               beforeShowDay : function (date) {
+                  var dayOfWeek = date.getDay ();
+                  // 0 : Sunday, 1 : Monday, ...
+                  if (dayOfWeek == 0 || dayOfWeek == 6) return [false];
+                  else return [true];
+               }
+            });
+         });
+      </script>
+
+<script>
+    $(function() {
+       $( "#datepicker-6" ).datepicker({
+          showOn:"button",
+          buttonImage: "download.jpg",
+          buttonImageOnly: true
+       });
+    });
+ </script>
+
+<script>
+   $(function() {
+      $( "#datepicker-7" ).datepicker({
+         defaultDate:+9,
+         dayNamesMin: [ "So", "Mo", "Di", "Mi", "Do", "Fr", "Sa" ],
+         duration: "slow"
+      });
+   });
+</script>
+
+<script>
+   $(function() {
+      $( "#datepicker-8" ).datepicker({
+         changeMonth:true,
+         changeYear:true,
+         numberOfMonths:[3,3]
+      });
+   });
+</script>
+   </head>
+   
+   <body>
+      <h1>DATEPICKER</h1>
+      <pre>
+         Datepickers in jQueryUI allow users to enter dates easily and visually. 
+         
+         You can customize the date format and language, restrict the selectable date ranges and add in buttons and other navigation options easily.
+
+         jQueryUI provides datepicker() method that creates a datepicker and changes the appearance of HTML elements on a page by adding new CSS classes. 
+     
+         Syntax
+            $(selector, context).datepicker(options);
+     
+      </pre>
+      <!-- HTML --> 
+      <p>Enter Date: <input type = "text" id = "datepicker-1"></p>
+      <hr>
+      <pre>In this example we use div element to get the inline date picker.</pre>
+      Enter Date: <div id = "datepicker-2"></div>
+      <hr>
+      <pre>In this example, you can see that the date formate for first input is set as yy-mm-dd. 
+          If you select some date from datepicker the same date is reflected in the second input field whose date format is set as "DD, d MM, yy".</pre>
+      <p>Enter Date: <input type = "text" id = "datepicker-3"></p>
+      <p>Alternate Date: <input type = "text" id = "datepicker-4"></p>
+      <hr>
+      <pre>In this example sunday and saturday are disabled.</pre>
+      <p>Enter Date: <input type = "text" id = "datepicker-5"></p>
+      <hr>
+      <pre>In this example an icon is displayed which needs to b clicked to open the datepicker.</pre>
+      <p>Enter Date: <input type = "text" id = "datepicker-6"></p>
+      <hr>
+      <pre>In thisexample the names of the days are changed using dayNamesMin. You can also see a default date is set.</pre>
+      <p>Enter Date: <input type = "text" id = "datepicker-7"></p>
+      <hr>
+      <pre>In this example, you can see dropdown menus for Month and Year fields. And we are dispalying 4 months in an array structure of [2,2].</pre>
+      <p>Enter Date: <input type = "text" id = "datepicker-8"></p>
+   </body>
+</html>

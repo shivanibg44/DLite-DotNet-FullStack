@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object Properties</h2>
+<p>Access a property with .property:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+
+
+<script>
+const person = 
+{
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue"
+};
+
+document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old."+"<br>";
+document.getElementById("demo1").innerHTML = person["firstname"] + " is " + person["age"] + " years old."+"<br>";
+
+//The JavaScript for...in statement loops through the properties of an object.
+var txt = "";
+for (var x in person) 
+{
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo2").innerHTML = txt;
+
+//You can add new properties to an existing object by simply giving it a value.
+person.nationality = "English";
+document.getElementById("demo3").innerHTML =
+person.firstname + " speaks " + person.nationality + ".";
+
+//The delete keyword deletes a property from an object  or delete person["age"];
+//The delete keyword deletes both the value of the property and the property itself.
+delete person.age;
+document.getElementById("demo4").innerHTML =
+person.firstname + " is " + person.age + " years old.";
+
+
+//Nested Objects:Values in an object can be another object
+const myObj = 
+{
+  name: "John",
+  age: 30,
+  cars: 
+  {
+  car1: "Ford",
+  car2: "BMW",
+  car3: "Fiat"
+  }
+}
+document.getElementById("demo5").innerHTML = myObj.cars.car2;
+</script>
+<hr>
+<h2>The JavaScript <i>this</i> Keyword</h2>
+<p>In this example, <b>this</b> represents the <b>p</b> object.</p>
+<p>Because the p object "owns" the fullName method.</p>
+
+<p id="demo6"></p>
+
+<script>
+// Create an object:
+var p =
+ {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName : function()
+   {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo6").innerHTML = p.fullName();
+</script>
+<hr>
+
+    <p id="p1"></p>
+	<p id="p2"></p>
+	
+	<script>
+        //Pass by Reference
+        //Object in JavaScript passes by reference from one function to another.
+		function changeFirstName(per)
+		{
+			per.firstName = "Steve";
+		}
+
+		var p = 
+    {
+       firstName : "Bill"
+      };
+		
+		document.getElementById("p1").textContent = p.firstName; 
+
+		changeFirstName(p);    
+
+		document.getElementById("p2").textContent = p.firstName; 
+		
+    </script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    //$(selector).stop(stopAll,goToEnd);
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#panel").slideDown(5000);
+      });
+      $("#stop").click(function () {
+        $("#panel").stop();
+      });
+    });
+  </script>
+  <style>
+    #panel,
+    #flip {
+      padding: 5px;
+      font-size: 18px;
+      text-align: center;
+      background-color: rgb(235, 172, 229);
+      color: white;
+      border: solid 1px rgb(235, 172, 229);
+      border-radius: 3px;
+    }
+
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>jQuery Stop Animations</h1>
+
+  The jQuery stop() method is used to stop an animation or effect before it is finished.
+
+  The optional stopAll parameter specifies whether also the animation queue should be cleared or not. Default is false,
+  which means that only the active animation will be stopped, allowing any queued animations to be performed afterwards.
+
+  The optional goToEnd parameter specifies whether or not to complete the current animation immediately. Default is
+  false.
+
+  So, by default, the stop() method kills the current animation being performed on the selected element.
+  <br>
+
+  <button id="stop">Stop sliding</button>
+
+  <div id="flip">Click to slide down panel</div>
+  <div id="panel">WELCOME TO JQUERY!!!!!!!</div>
+  <hr>
+  <h1>jQuery Callback Functions</h1>
+
+  A callback function is executed after the current effect is 100% finished.
+
+  JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though
+  the effect is not finished. This can create errors.
+
+  To prevent this, you can create a callback function.
+
+  A callback function is executed after the current effect is finished.
+
+  Typical syntax: $(selector).hide(speed,callback);
+
+  <script>
+    $(document).ready(function () {
+      $("#one").click(function () {
+        $("p").hide("slow", function () {
+          alert("Have a Good Day!!!!!!!");
+        });
+      });
+    });
+  </script>
+  //Without callback parameter
+  //The example below has no callback parameter, and the alert box will be displayed before the hide effect is completed
+  <script>
+    $(document).ready(function () {
+      $("#two").click(function () {
+        $("h6").hide(1000);
+        alert("h6 is hidden");
+      });
+    });
+  </script>
+  <br>
+
+  <button id="one">Callback Function</button>
+
+  <p>Welcome to CG VAK</p>
+  <br>
+  <button id="two">Without callback parameter</button>
+
+  <h6>Bye!!!!!!!</h6>
+  <hr>
+  <h1>jQuery - Chaining</h1>
+  With jQuery, you can chain together actions/methods.
+
+  Chaining allows us to run multiple jQuery methods (on the same element) within a single statement.
+
+  Until now we have been writing jQuery statements one at a time (one after the other).
+
+  However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the other, on
+  the same element(s).
+
+  To chain an action, you simply append the action to the previous action.
+
+  The following example chains together the css(), slideUp(), and slideDown() methods. The "p1" element first changes to
+  red, then it slides up, and then it slides down:
+
+  <script>
+    $(document).ready(function () {
+      $("#3").click(function () {
+        $("#1").css("color", "red").slideUp(2000).slideDown(2000).fadeOut(1000);;
+        $("#d1").slideToggle(1000).css("color", "purple").css("font-size", "30px");
+      });
+    });
+  </script>
+  <br>
+
+  <div id="d1" style="font-size: large;margin-left: 300px;">Hi</div>
+  <br>
+
+  <button id="3">Chaining</button>
+  <p id="1">hello</p>
+
+</body>
+
+</html>

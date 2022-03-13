@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Buttons functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <script>
+         $(function() {
+            $( "#button-1, #button-2, #button-3, #button-4" ).button();
+            $( "#button-5" ).buttonset();
+         });
+      </script>
+
+<script>
+    //https://api.jqueryui.com/resources/icons-list.html  (list of icons available in this link)
+    $(function() {
+       $( "#button-6" ).button({
+          icons: {
+             primary: "ui-icon-locked"
+          },
+          text: false
+       });
+       $( "#button-7" ).button({
+          disabled:true
+       });
+       $( "#button-8" ).button({
+          icons: {
+             primary: "ui-icon-gear",
+             secondary: "ui-icon-triangle-1-s"
+          }
+       });
+    });
+ </script>
+   </head>
+   
+   <body>
+      <H1>JQUERY BUTTON UI</H1>
+       <pre>
+        jQueryUI provides button() method to transform the HTML elements (like buttons, inputs and anchors) into themeable buttons,
+     with automatic management of mouse movements on them, all managed transparently by jQuery UI.
+
+        In order to group radio buttons, Button also provides an additional widget, called Buttonset. 
+        
+        Buttonset is used by selecting a container element (which contains the radio buttons) and calling .buttonset().
+
+        Syntax
+            $(selector, context).button (options);
+       </pre>
+      <button id = "button-1">A button element</button>
+      <input id = "button-2" type = "submit" value = "A submit button">
+      <a id = "button-3" href = "">An anchor</a>
+      <input type = "checkbox"  id = "button-4" >
+      <label for = "button-4">Toggle</label>
+      <br><br>
+      <div id = "button-5">
+         <input type = "checkbox" id = "check1">
+         <label for = "check1">Left</label>
+         <input type = "checkbox" id = "check2">
+         <label for = "check2">Middle</label>
+         <input type = "checkbox" id = "check3">
+         <label for = "check3">Right</label>
+      </div>
+
+      <button id = "button-6">
+        Button with icon only
+     </button>
+     <button id = "button-7">
+        Button Disabled
+     </button>
+     <button id = "button-8">
+        Button with two icons
+     </button>
+   </body>
+</html>

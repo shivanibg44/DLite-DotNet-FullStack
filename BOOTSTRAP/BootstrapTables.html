@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Bootstrap Tables</h1>
+
+<div class="container">
+  <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+  <table class="table"> <!--//class="table table-striped"  class="table table-bordered"  .table-hover class-->
+    <!--The .table-condensed class makes a table more compact by cutting cell padding in half class="table table-condensed"-->
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Naveen</td>
+        <td>Kumar</td>
+        <td>nk@example.com</td>
+      </tr>
+      <tr>
+        <td>Lalith</td>
+        <td>Mohan</td>
+        <td>lm@example.com</td>
+      </tr>
+      <tr>
+        <td>Riju</td>
+        <td>C</td>
+        <td>rc@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+<div class="container" class="table-responsive"><!--The .table-responsive class creates a responsive table. The table will then scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference-->
+    <h2>Contextual Classes</h2>
+    <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nevetha</td>
+          <td>J</td>
+          <td>nj@somemail.com</td>
+        </tr>      
+        <tr class="success">
+          <td>Aakass</td>
+          <td>Elango</td>
+          <td>ae@example.com</td>
+        </tr>
+        <tr class="danger">
+          <td>Danger</td>
+          <td>K</td>
+          <td>dk@example.com</td>
+        </tr>
+        <tr class="info">
+          <td>Vishal</td>
+          <td>TS</td>
+          <td>vts@example.com</td>
+        </tr>
+        <tr class="warning">
+          <td>Warning</td>
+          <td>Refs</td>
+          <td>bo@example.com</td>
+        </tr>
+        <tr class="active">
+          <td>Aakash</td>
+          <td>K</td>
+          <td>ak@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

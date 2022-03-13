@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<title>FlexBox</title>
+<style>
+    /*OUTER DIV*/
+.outer-container
+ {
+  font: 16px sans-serif;
+  background: gold;
+  color: white;
+  height: 200px;
+  display: flex;
+}
+/*INNER DIV*/
+.box 
+{
+  padding: 10px;
+  flex: 1 0 auto;
+}
+.larger 
+{
+  background: yellowgreen;
+  flex: 3 0 auto;
+}
+</style>
+<body>
+    <p>
+        Flexbox includes a number of properties that allow you to define a flexible box, as well as the behavior of the items inside it.
+
+First, you declare the flex container by applying display: flex or display: inline-flex to it. This establishes a new flex formatting context for its contents.
+
+Once you have a flex container, you can then apply the various flex properties to its children. The flex property is shorthand for the main flex properties, and it goes like this:
+
+Here, we specify that the normal box "grow factor" is 1 and the larger box is 3. The grow factor specifies how much the flex item grows relative to the rest of the flex items in the flex container.
+    </p>
+<div class="outer-container">
+  <div class="box">Box</div>
+  <div class="box larger">Larger Box</div>
+  <div class="box">Box</div>
+  <div class="box larger">Larger Box</div>
+</div>
+</body>
+</html>

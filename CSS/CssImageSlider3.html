@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<title> animation</title>
+</head>
+<style>
+       .slider-holder
+        {
+            width: 600px;
+            height: 400px;
+            background-color: yellow;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            overflow: hidden;
+        }
+       
+        .image-holder
+        {
+            width: 1800px;
+           
+            height: 400px;
+            clear: both;
+            position: relative;
+           
+            -webkit-transition: left 2s;
+            -moz-transition: left 2s;
+            -o-transition: left 2s;
+            transition: left 2s;
+        }
+       
+        .img
+        {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+       
+        #slide1:target ~ .image-holder
+        {
+            left: 0px;
+        }
+       
+        #slide2:target ~ .image-holder
+        {
+            left: -600px;
+        }
+       
+        #slide3:target ~ .image-holder
+        {
+            left: -1200px;
+        }
+       
+        .button-holder
+        {
+            position: relative;
+            top: -20px;
+        }
+       
+        .btt
+        {
+            display: inline-block;
+            height: 20px;
+            width: 10px;
+            border-radius: 5px;
+            background-color: rgb(208, 221, 18);
+        }
+		</style>  
+		<body>
+		<div class="slider-holder">
+		<span id="slide1"></span>
+		<span id="slide2"></span>
+		<span id="slide3"></span>
+		
+		<div class="image-holder">
+		<img src="img1.jpg" alt="car1" class="img" style="height:400px; width:600px;">
+		<img src="img2.jpg" alt="car2" class="img" style="height:400px; width:600px;">
+		<img src="img3.jpg" alt="car" class="img" style="height:400px; width:600px;">
+		</div>
+		<div class="button-holder">
+		<a href="#slide1" class="btt"></a>
+		<a href="#slide2" class="btt"></a>
+		<a href="#slide3" class="btt"></a>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+	
+		
+		</body>
+        </html>

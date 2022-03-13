@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div p {
+  background-color: yellow;
+}
+div > h5{
+  background-color: pink;
+}
+div + h4 {
+  background-color: orange;
+}
+div ~ h3{
+  background-color: blue;
+}
+</style>
+</head>
+<body>
+<pre>
+CSS Combinators
+A combinator is something that explains the relationship between the selectors.
+
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+</pre>
+
+<h2>Descendant Selector</h2>
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p >Paragraph 4. Not in a div.</p>
+<p >Paragraph 5. Not in a div.</p>
+<hr>
+
+<h2>Child Selector</h2>
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div>
+  <h5>h5 1 in the div.</h5>
+  <h5>h5 2 in the div.</h5>
+  <section><h5>h5 3 in the div.</h5></section> <!-- not Child but Descendant -->
+  <h5>h5 4 in the div.</h5>
+</div>
+
+<h5 >h5 5 Not in a div.</h5>
+<h5 >h5 6 Not in a div.</h5>
+<hr>
+
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first h4 element that are placed immediately after div elements:</p>
+
+<div>
+  <h4>h4 1 in the div.</h4>
+  <h4>h4 2 in the div.</h4>
+</div>
+
+<h4>h4 3. After a div.</h4>
+<h4>h4 4. After a div.</h4>
+
+<div>
+  <h4>h4 5 in the div.</h4>
+  <h4>h4 6 in the div.</h4>
+</div>
+
+<h4>h4 7. After a div.</h4>
+<h4>h4 8. After a div.</h4>
+
+<div>
+  <h4>h4 5 in the div.</h4>
+  <h4>h4 6 in the div.</h4>
+</div>
+
+<h4>h4 7. After a div.</h4>
+<h4>h4 8. After a div.</h4>
+<hr>
+
+<h2>General Sibling Selector</h2>
+<p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+
+
+<div>
+  <h3>h3 1.</h3>
+</div>
+
+<h3>h3 2.</h3>
+<code>Some code.</code>
+<h3>h3 3.</h3>
+<h3>h3 4.<h3>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+
+<meta name="viewport" content="width-device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible content="ie-edge">
+        
+            <style>
+
+
+
+
+                h1 { 
+                    color:white;
+
+                }
+                
+            </style>
+            
+            <script>
+
+
+function bgg()
+             {
+        document.body.style.backgroundImage = "url('images/5.jpeg')";
+        document.body.style.backgroundColor = "pink";
+}
+               function sayHello()
+                {
+                  alert("Thank you for Clicking")
+               }
+
+               function setNewImage()
+
+{
+document.getElementById("img1").src ="images/4.jpeg";
+}
+function setOldImage()
+{
+document.getElementById("img1").src
+="images/6.jpeg";
+
+}
+
+
+           
+      
+
+var a = 22;
+var b = 225;
+var c = 220;
+function changeBackground()
+
+{
+//var x = document.getElementById('bg');
+bg.style.backgroundColor = 'pink';
+
+}
+
+
+function hov() {
+var e = document.getElementById('hover');
+//e.style.display = 'none';
+e.style.height='50px';
+hover.style.backgroundColor='pink';
+
+}
+function highlightInput()
+{
+    var e = document.getElementById('focus');
+            e.style.backgroundColor = 'green';
+        } 
+
+        function para() {
+  document.getElementById("demo").innerHTML = "Paragraph changed!";
+}
+function list() {
+  var x = document.getElementById("myList").innerHTML;
+  document.getElementById("demo").innerHTML = x;
+}
+
+
+
+
+
+         </script>   
+    </head>
+   
+   
+   
+    <body onload="window.alert('Page is loaded successfully!');">
+
+        <p id="demo" onclick="para()">Click me to change my HTML content (innerHTML).</p>
+
+
+        <button type="button" onclick="bgg()">Set background image</button>
+
+        <ul id="myList">
+            <li>Coffee</li>
+            <li>Tea</li>
+          </ul>
+          
+          <p>Click the button get the HTML content of the ul element.</p>
+          
+          <button onclick="list()">Try it</button>
+          
+          <p id="demo"></p>
+        
+        
+        
+        <h1>EVENTS</h1>
+        
+          <h1> Onclick to view Time</h1> <br>
+      
+      <button onclick="this.innerHTML = Date()">TIME</button>  
+      <br>
+      <br>
+
+      <h1> IMAGE HOVER</h1>
+      <img  id="img1" onmouseover="setNewImage()"
+onmouseout="setOldImage()" src="6.jpeg"
+width="400" height="350"/><br>
+<br>
+      
+       <h1> ONCLICK </h1><br>
+        <form>
+            <input type = "button" onclick = "sayHello()" value = "CLICK HERE" />
+<br>
+<br>
+<br>
+
+<h1> ONCHANGE</h1>
+            <select onchange="alert('You have changed the selection!');">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>javascript</option>
+            </select>
+
+
+<h1> ONKEYUP</h1>
+
+            <hr>
+            <input id="bg" onkeyup="changeBackground()"
+placeholder="write something" style="color:rgb(36, 32, 32)">
+<hr>
+
+<br>
+<br>
+<h1> ONKEYPRESS</h1><br>
+<input type="text" onkeypress="alert('You have pressed a key inside text input!')" placeholder="text input">
+<br>
+
+<br>
+<br>
+<h1> ONFOCUS</h1>
+
+<input id="focus" type="text" onfocus="highlightInput()">
+<br>
+
+            
+         </form>
+         <hr>
+         
+
+
+
+                
+    </body>
+</html>
+

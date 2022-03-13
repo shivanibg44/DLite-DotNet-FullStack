@@ -1,0 +1,114 @@
+<html>
+    <body>
+        <h1>Error handling in JavaScript</h1>
+        <pre>
+            
+JavaScript is a loosely-typed language. It does not give compile-time errors. 
+So some times you will get a runtime error for accessing an undefined variable or calling undefined function etc.
+JavaScript provides error-handling mechanism to catch runtime errors using try-catch-finally block, similar to other languages like Java or C#.
+
+try: wrap suspicious code that may throw an error in try block.
+
+catch: write code to do something in catch block when an error occurs. 
+The catch block can have parameters that will give you error information. 
+Generally catch block is used to log an error or display specific messages to the user.
+
+finally: code in the finally block will always be executed regardless of the occurrence of an error. 
+The finally block can be used to complete the remaining task or reset variables that might have changed before error occurred in try block.
+ 
+Types of Errors
+
+While coding, there can be three types of errors in the code:
+
+Syntax Error: When a user makes a mistake in the pre-defined syntax of a programming language, a syntax error may appear.
+
+Runtime Error: When an error occurs during the execution of the program, such an error is known as Runtime error. 
+The codes which create runtime errors are known as Exceptions. 
+Thus, exception handlers are used for handling runtime errors.
+
+Logical Error: An error which occurs when there is any logical mistake in the program that may not produce the desired output, and may terminate abnormally. 
+Such an error is known as Logical error.
+
+
+
+</pre>
+    </body>
+    <p id="errorMessage"></p>
+    <p id="message"></p>
+	
+	<script>
+		try
+		{
+			//var result  =  Sum(10, 20); // Sum is not defined yet
+            var a=10;
+            
+		}
+		catch(ex)
+		{
+			document.getElementById("errorMessage").innerHTML = ex;
+		}
+        finally
+        {
+         document.getElementById("message").innerHTML = "finally block executed"+ a;
+        }
+    </script>
+    <hr>
+    <p id="errorMessage1"></p>
+	
+	<script>
+		try
+		{
+			throw {
+				number: 404,
+				message: "Page not found"
+			};
+		}
+		catch(ex)
+		{
+			document.getElementById("errorMessage1").innerHTML = ex.number + "- " + ex.message;
+		}
+
+    </script>
+    <hr>
+    <script type="text/javascript">
+  
+        // An runtime error here 
+        window.printme(); 
+
+         // Here the semicolon after the printing statement
+      //  is missing and it is a syntax error
+      window.print() 
+    
+  </script>
+  <hr>
+  <h3>Exception Example</h3>
+  <script>
+  var num = prompt("Enter a positive integer between 0 to 100");
+
+// Storing the time when execution start
+var start = Date.now();
+
+try 
+{
+    if(num > 0 && num <= 100) 
+    {
+        alert(Math.pow(num, num)+"<br>"); // the base to the exponent power
+    } 
+    else
+    {
+        throw new Error("An invalid value is entered!");
+    }
+} 
+catch(e) 
+{
+    document.write(e.message);
+} 
+finally 
+{
+    // Displaying the time taken to execute the code
+    alert("Execution took: " + (Date.now() - start) + "ms");
+}
+
+</script>
+</body>
+</html>

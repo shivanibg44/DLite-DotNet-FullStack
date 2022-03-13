@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">JAVASCRIPT CONCEPTS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="jsabstraction.html">ABSTRACTION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">ENCAPSULATION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="jsexpression.html">REGULAR EXPRESSION</a>
+                </li> 
+                 
+                
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        <br>
+        <h3> ABSTRACTION</h3>
+        <hr>
+        
+        <p>CODE 1</p>
+        <pre>
+      <code>
+        
+        
+            //Creating a constructor function
+             function Vehicle()
+            {
+                this.vehicleName="vehicleName";
+                throw new Error("You cannot create an instance of Abstract Class");
+            }
+            Vehicle.prototype.display=function()
+            {
+                return "Vehicle is: "+this.vehicleName;
+            }
+            //Creating a constructor function
+            function Bike(vehicleName)
+            {
+                this.vehicleName=vehicleName;
+            }
+            //Creating object without using the function constructor
+            Bike.prototype=Object.create(Vehicle.prototype);
+            var bike=new Bike("Honda");
+            document.writeln(bike.display());     
+      </code>
+  </pre>
+
+  <div class="container">
+    <br>
+    <h3> Output</h3>
+    <hr>
+        <p>
+            <script>
+                //Creating a constructor function
+             function Vehicle()
+            {
+                this.vehicleName="vehicleName";
+                throw new Error("You cannot create an instance of Abstract Class");
+            }
+            Vehicle.prototype.display=function()
+            {
+                return "Vehicle is: "+this.vehicleName;
+            }
+            //Creating a constructor function
+            function Bike(vehicleName)
+            {
+                this.vehicleName=vehicleName;
+            }
+            //Creating object without using the function constructor
+            Bike.prototype=Object.create(Vehicle.prototype);
+            var bike=new Bike("Honda");
+            document.writeln(bike.display());
+            
+                
+            </script>
+        </p>
+        <br>
+    </div>
+
+    <div class="container">
+        <br>
+        
+        <hr>
+        
+        <p>CODE 2</p>
+        <pre>
+      <code>
+        
+        
+        
+            //Creating a constructor function  
+             function Vehicle()  
+            {  
+                this.vehicleName=vehicleName;  
+                throw new Error("You cannot create an instance of Abstract class");  
+            }  
+            //Creating a constructor function  
+            function Bike(vehicleName)  
+            {  
+                this.vehicleName=vehicleName;  
+            }  
+            Bike.prototype=Object.create(Vehicle.prototype);  
+            var bike=new Bike("Honda");  
+            document.writeln(bike instanceof Vehicle);  
+            document.writeln(bike instanceof Bike);         
+      </code>
+  </pre>
+
+  <div class="container">
+    <br>
+    <h3> Output</h3>
+    <hr>
+        <p>
+            <script>
+              //Creating a constructor function  
+             function Vehicle()  
+            {  
+                this.vehicleName=vehicleName;  
+                throw new Error("You cannot create an instance of Abstract class");  
+            }  
+            //Creating a constructor function  
+            function Bike(vehicleName)  
+            {  
+                this.vehicleName=vehicleName;  
+            }  
+            Bike.prototype=Object.create(Vehicle.prototype);  
+            var bike=new Bike("Honda");  
+            document.writeln(bike instanceof Vehicle);  
+            document.writeln(bike instanceof Bike);              
+                
+            </script>
+        </p>
+        <br>
+    </div>
+
+</body>
+
+</html>

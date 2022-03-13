@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <b> TRAINEES!!!!!!!</b>.");
+  });
+
+  $("#btn2").click(function(){
+   $("ul").append("<li>JQUERY</li>");
+
+   $("#btn3").click(function(){
+    $("p").prepend("*******");
+  });
+  $("#btn4").click(function(){
+    $("ul").prepend("<li>WWW</li>");
+  });
+    
+  });
+
+  $("#btn5").click(function(){
+    $("#img").before("<b>Before</b>");
+  });
+
+  $("#btn6").click(function(){
+    $("#img").after("<i>After</i>");
+  });
+});
+
+var url ='border.png';
+ 
+$(document).ready(function()
+ {
+    $(`<img src='${url}'>`).appendTo('#container');
+});
+
+function appendText() 
+{
+  var txt1 = "<p>Hello</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Hi");  // Create text with jQuery
+  var txt3 = document.createElement("h1");
+  txt3.innerHTML = "Welcome to CG VAK";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements  Try after and before
+  $("body").append(document.getElementById("text1").value);
+}
+
+
+
+</script>
+</head>
+<body>
+    <h1>jQuery - Add Elements</h1>
+
+    <pre>
+        With jQuery, it is easy to add new elements/content.
+
+Add New HTML Content
+We will look at four jQuery methods that are used to add new content:
+
+append() - Inserts content at the end of the selected elements
+prepend() - Inserts content at the beginning of the selected elements
+after() - Inserts content after the selected elements
+before() - Inserts content before the selected elements
+    </pre>
+
+<p>HELLO</p>
+<p>HOW ARE YOU</p>
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JAVASCRIPT</li>
+</ul>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+<button id="btn3">Prepend text</button>
+<button id="btn4">Prepend list item</button>
+<button onclick="appendText()">Append several items</button>
+
+
+<div id="container"></div>
+Enter text to append:<input type="text" placeholder="Enter text" id="text1">
+<hr>
+<img src="img4.jpg" alt="jQuery" width="100" height="140" id="img"><br><br>
+
+<button id="btn5">Insert before</button>
+<button id="btn6">Insert after</button>
+
+</body>
+</html>

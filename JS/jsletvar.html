@@ -1,0 +1,72 @@
+<html>
+  
+<body>
+    <p>
+        var and let are both used for variable declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
+It can be said that a variable declared with var is defined throughout the program as compared to let.
+    </p>
+    <script>
+        // calling x after definition
+        var x = 5;
+        document.write(x, "\n");
+  
+        // calling y after definition 
+        let y = 10;
+        document.write(y, "\n");
+  
+        // calling var z before definition will return undefined
+        document.write(z, "\n");
+        var z = 2;
+  
+        // calling let a before definition will give error
+        document.write(a);
+        let a = 3;
+    </script>
+    <hr>
+    <p>If I declare a let variable at the global scope, then redeclare it within a block (curly brackets) as in the example below, I will not get an error in the console, but it will not actually redeclare let.</p>
+    <p>Because let winner = false and let winner = true, are actually two separate variables because they are scoped differently, even though they have the same name.</p>
+    <script>
+
+        let points = 50;
+let winner = false;
+if(points > 40) 
+{
+  let winner = true;
+  
+}
+document.write(winner);
+// If I call: winner
+// It returns the first value: false
+// change let to var and see the output
+    </script>
+    <hr>
+    <pre>
+        const x = 2;     // Allowed
+x = 2;           // Not allowed
+var x = 2;       // Not allowed
+let x = 2;       // Not allowed
+const x = 2;     // Not allowed
+
+{
+  const x = 2;   // Allowed
+  x = 2;         // Not allowed
+  var x = 2;     // Not allowed
+  let x = 2;     // Not allowed
+  const x = 2;   // Not allowed
+}
+    </pre>
+    <p>The const keyword was introduced in ES6 (2015).
+
+        Variables defined with const cannot be Redeclared.
+        
+        Variables defined with const cannot be Reassigned.
+        
+        Variables defined with const have Block Scope.</p>
+    <script>
+const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error
+    </script>
+</body>
+  
+</html>              

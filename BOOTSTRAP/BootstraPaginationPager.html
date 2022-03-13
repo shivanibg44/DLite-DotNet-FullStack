@@ -1,0 +1,130 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  </pagination> 
+</head>  
+<body>  
+    <h1>Bootstrap Pagination</h1>
+    <div class="container">
+        <p>
+            Pagination is used to sort the web pages of your website in an organized manner. 
+            It becomes very necessary if your website has a lot of web pages.</p>
+    </div>
+  
+<div class="container">  
+  <h2>A basic pagination example</h2>  
+  <p>The .pagination class provides pagination links</p>                    
+  <ul class="pagination " class="pager">  <!--Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
+    <li class="previous"><a href="">previous</a></li>
+    <li class="active"><a href="#">1</a></li>  
+    <li><a href="#">2</a></li>  
+    <li  class="disabled"><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">5</a></li> 
+    <li class="next"><a href="#">next</a></li>  
+  </ul>  
+</div>  
+<hr>
+<div class="container">  
+    <h2>Breadcrumbs</h2>  
+    <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy</p>                    
+    <ul class="breadcrumb">  
+      <li><a href="#">Java</a></li>  
+      <li><a href="#">SQL</a></li>  
+      <li><a href="#">Php</a></li>  
+      <li class="active">.Net</li>          
+    </ul>  
+  </div>  
+  <hr>
+  <nav aria-label="Page navigation example"> <!--defines a string that labels the current element-->
+    <ul class="pagination">
+      <li class="page-item disabled"><a class="page-link">First</a></li>
+      <li class="page-item disabled">
+        <a class="page-link" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span> <!--screen readers-->
+        </a>
+      </li>
+      <li class="page-item active"><a class="page-link">1</a></li>
+      <li class="page-item"><a class="page-link">2</a></li>
+      <li class="page-item"><a class="page-link">3</a></li>
+      <li class="page-item"><a class="page-link">4</a></li>
+      <li class="page-item"><a class="page-link">5</a></li>
+      <li class="page-item">
+        <a class="page-link" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link">Last</a></li>
+    </ul>
+  </nav>
+  <hr>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center"> <!--justify-content-end-->
+      <li class="page-item"><a class="page-link">&laquo;</a></li>
+      <li class="page-item"><a class="page-link">1</a></li>
+      <li class="page-item"><a class="page-link">2</a></li>
+      <li class="page-item"><a class="page-link">3</a></li>
+      <li class="page-item"><a class="page-link">Next</a></li>
+    </ul>
+  </nav>
+  <hr>
+  <div class="container">
+    <h2>Breadcrumbs</h2>
+    <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>                  
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Bootstrap</a></li>
+      <li class="breadcrumb-item"><a href="#">Pagination</a></li>
+      <li class="breadcrumb-item"><a href="#">Breadcrumbs</a></li>
+      <li class="breadcrumb-item active">Example</li>
+    </ul>
+  </div>
+  <hr>
+  <h1>Bootstrap 4 Text/Typography</h1>
+  <p>Bootstrap 4 Default Settings
+    Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5.
+    
+    The default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif.
+    
+    In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default).</p>
+  <div class="container">
+    <h1>Display Headings</h1>
+    <p>Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight):</p>
+    <h1 class="display-1">Display 1</h1>
+    <h1 class="display-2">Display 2</h1>
+    <h1 class="display-3">Display 3</h1>
+    <h1 class="display-4">Display 4</h1>
+  </div>
+  <hr>
+  <div class="container">
+    <h1>Lighter, Secondary Text</h1>
+    <p>The small element is used to create a lighter, secondary text in any heading:</p>       
+    <h1>h1 heading <small>secondary text</small></h1>
+    <h2>h2 heading <small>secondary text</small></h2>
+    <h3>h3 heading <small>secondary text</small></h3>
+    <h4>h4 heading <small>secondary text</small></h4>
+    <h5>h5 heading <small>secondary text</small></h5>
+    <h6>h6 heading <small>secondary text</small></h6>
+  </div>
+  <hr>
+  <div class="container">
+    <h1>Keyboard Inputs</h1>
+    <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+    <p>Use <kbd>Ctrl + P</kbd> to open the Print dialog box.</p>
+    <p>Use <kbd>F12</kbd> for debugging</p>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  
+</body>  
+</html>  

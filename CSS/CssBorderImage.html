@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(IMG2.jpg) 30% round;/*other options stretch,50 round,30% round*/
+  
+}
+#borderimg1 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(bi.png) 5% stretch;/*other options stretch,50 round,30% round*/
+  
+}
+#borderimg2 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(bi.png) 50 round;/*slice the border*/
+  
+}
+#borderimg3 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(bi.png) 50% round;/*slice the border*/
+  
+}
+#borderimg4 { 
+  border: 40px groove transparent;
+  padding: 15px;
+  border-image: url(img4.jpg) ;
+  
+}
+</style>
+</head>
+<body>
+
+<h1>The border-image Property</h1>
+
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg"></p>
+<hr>
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg1"></p>
+<hr>
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg2"></p>
+<hr>
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg3"></p>
+<hr>
+<p>Here, the middle sections of the image are repeated to create the border:</p>
+<p id="borderimg4"></p>
+
+
+
+</body>
+</html>

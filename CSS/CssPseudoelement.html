@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::first-line {
+  color: red;
+  font-variant: small-caps;
+}
+
+p::first-letter {
+  color: green;
+  font-size: xx-large;
+} 
+h1::before{
+  content: url(smiley.jpg);
+}
+::marker { 
+  color: red;
+  font-size: 20px;
+}
+::selection {
+  color: red;
+  background: yellow;
+}
+</style>
+</head>
+<body>
+<h1>Pseudo-Elements</h1>
+<pre>
+
+
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+Style the first letter, or line, of an element
+
+Insert content before, or after, the content of an element
+
+</pre>
+
+<p>You can use the <b>::first-line pseudo-element</b> to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+<pre>
+Note: The ::first-line pseudo-element can only be applied to block-level elements.
+
+The following properties apply to the ::first-line pseudo-element:
+
+font properties
+color properties
+background properties
+word-spacing
+letter-spacing
+text-decoration
+vertical-align
+text-transform
+line-height
+clear
+
+</pre>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+</body>
+</html>

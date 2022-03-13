@@ -1,0 +1,139 @@
+<html>
+    <body>
+        <p>The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place</p>
+        <script>
+            const months = ['Jan', 'March', 'April', 'June'];
+            //splice(start, deleteCount, item1, item2, itemN)
+months.splice(1, 0, 'Feb');
+// inserts at index 1
+document.write(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "June"]
+document.writeln("<br/>"); 
+
+months.splice(4, 1, 'May');
+// replaces 1 element at index 4
+document.write(months);
+
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+document.writeln("<br/>"); 
+
+var a = ['one', 'two', 'three', 'four', 'five']
+document.write(a);
+document.writeln("<br/>"); 
+var b = a.splice(2, 2);
+document.write(b);
+document.writeln("<br/>"); 
+document.write(a);
+document.writeln("<br/>"); 
+a.splice(2, 0, 'three','four');
+document.write(a);
+document.writeln("<br/>"); 
+            </script>
+            <hr>
+            <p>The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+            <script>
+                const array1 = ['one ', 'b', 'c'];
+const array2 = ['d', 'e', 'six'];
+const array3 = array1.concat(array2);
+
+document.write(array3);
+            </script>
+            <hr>
+            <script>
+                const letters = ['a', 'b', 'c'];
+
+const alphaNumeric = letters.concat(1, 2, 3);
+
+document.write(alphaNumeric);
+// results in ['a', 'b', 'c', 1, 2, 3]
+            </script>
+            <hr>
+            <p>The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.</p>
+            <script>
+                var a = ['a', 'b', 'c','d','e'];
+var iterator = a.entries();
+
+for (let e of iterator)
+ {
+  document.write(e+"<br>");
+}
+            </script>
+            <hr>
+            <p>The reverse() method reverses an array in place</p>
+            <script>
+                var a = [1, 2, 3];
+
+document.write(a); // [1, 2, 3]
+
+a.reverse();
+document.writeln("<br/>"); 
+
+document.write(a); // [3, 2, 1]
+            </script>
+            <hr>
+            <p>The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
+    <p>The lastIndexOf() method returns the last index (position) of a specified value</p>
+    <script>
+var fruits = ["Banana", "Orange", "Apple", "Mango","Apple"];
+var a=fruits.indexOf("Apple") ;  // Returns 2
+document.write(a);
+document.writeln("<br/>"); 
+a=fruits.lastIndexOf("Apple"); 
+document.write(a);
+    </script>
+    <hr>
+    <p>The toString() method returns an array as a comma separated string:</p>
+
+    <p id="demo"></p>
+    
+    <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.toString();
+    </script>
+    <hr>
+    <p>The join() method returns an array as a string.
+
+        The elements will be separated by a specified separator. The default separator is comma (,).
+        
+        join() does not change the original array.</p>
+        <script>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var a=fruits.join() ;  // Returns "Banana,Orange,Apple,Mango"
+document.write(a);
+console.log(a);
+console.log(fruits);
+        </script>
+        <hr>
+        <p>The slice() method returns selected elements in an array, as a new array.
+
+            slice() selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+            
+            slice() does not change the original array.</p>
+            <script>
+                 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                 //extract the third and fourth elements, using negative numbers.
+  var a = fruits.slice(-3, -1);
+  document.write(a);
+  document.writeln("<br/>"); 
+  var b = fruits.slice(1, 4);
+  document.write(b);
+            </script>
+<hr>
+<p>The sort() method sorts an array alphabetically</p>
+<script>
+    var arr = [2, 5, 8, 1, 4]
+document.write(arr.sort());
+document.write(arr);
+</script>
+<hr>
+<p>The filter() method creates a new array with all elements that pass the test implemented by the provided function.</p>
+<script>
+var words = ['Vishal', 'Naveen', 'Aakash', 'Lalith', 'Riju', 'Aakass Elango'];
+
+var result = words.filter(word => word.length == 6);
+
+document.write(result);
+</script>
+        </body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>JavaScript Global scope</h1>
+    <p>Variables declared outside of any function become global variables. Global variables can be accessed and modified from any function.</p>
+
+	
+	<script>
+		 var userName = "Bill";
+
+		function modifyUserName() 
+        {
+            userName = "Steve";
+        };
+
+	    function showUserName() 
+        {
+            document.write(userName);
+        };
+
+
+		document.write(userName);
+
+		modifyUserName();
+		showUserName();
+		
+    </script>
+    <hr>
+    <h1>Local scope</h1>
+	<p id="error"></p>
+
+	<script>
+		function createUserName() 
+        {
+            //change to username="Bill" it becomes global scope when var keyword is not specified
+			 var userName1 = "Bill";
+		}
+
+		function showUserName()
+         {
+			try
+            {
+			    document.write(userName1);
+			}
+			catch(ex)
+			{
+				document.getElementById("error").innerHTML = ex;
+			}
+		}
+
+		createUserName();
+		showUserName(); // throws error: userName is not defined
+
+	</script>
+</body>
+</html>

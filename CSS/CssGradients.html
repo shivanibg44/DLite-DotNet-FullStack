@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow);
+}
+#grad1 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , yellow);
+}
+
+#grad3 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow, green);
+}
+
+#grad4 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+}
+#grad5 {
+  height: 200px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+#grad6 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red, yellow, green);
+}
+#grad7 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red, yellow, green);
+}
+
+#grad8 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(circle, red, yellow, green);
+}
+#grad9 {
+  height: 150px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+#grad10 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(190deg,red,yellow 7%,green 10%);
+}
+</style>
+</head>
+<body>
+
+<h1>Linear Gradient - Top to Bottom</h1>
+<p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
+<div id="grad"></div>
+
+<h1>Linear Gradient - Left to Right</h1>
+<p>This linear gradient starts red at the left, transitioning to yellow (to the right):</p>
+
+<div id="grad1"></div>
+
+<h1>Linear Gradients - Multiple Color Stops</h1>
+<p><strong>Note:</strong> Color stops are spaced evenly when no percents are specified.</p>
+
+<h2>3 Color Stops (evenly spaced):</h2>
+<div id="grad3"></div>
+
+<h2>7 Color Stops (evenly spaced):</h2>
+<div id="grad4"></div>
+
+<h1>Linear Gradient - Transparency</h1>
+<p>To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full color (no transparency).</p>
+
+<div id="grad5"></div>
+
+<h1>Radial Gradient - Evenly Spaced Color Stops</h1>
+
+<div id="grad6"></div>
+
+<h1>Radial Gradient - Shapes</h1>
+
+<h2>Ellipse (this is default):</h2>
+<div id="grad7"></div>
+
+<h2><strong>Circle:</strong></h2>
+<div id="grad8"></div>
+<h1>Repeating Radial Gradient</h1>
+
+<div id="grad9"></div>
+<h1>Repeating Linear Gradient</h1>
+
+<p>A repeating gradient on 190deg axe starting red and finishing green:</p>
+<div id="grad10"></div>
+
+
+
+
+
+
+</body>
+</html>
